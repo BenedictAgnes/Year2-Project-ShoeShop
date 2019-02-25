@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/ShoeShop/conf/routes
-// @DATE:Fri Feb 22 12:07:20 GMT 2019
+// @SOURCE:/home/wdd/Project/Year2-Project-ShoeShop/conf/routes
+// @DATE:Mon Feb 25 16:58:27 GMT 2019
 
 import play.api.mvc.Call
 
@@ -35,8 +35,16 @@ package controllers {
   
     // @LINE:6
     def index(): Call = {
+    
+      () match {
       
-      Call("GET", _prefix)
+        // @LINE:6
+        case ()  =>
+          
+          Call("GET", _prefix)
+      
+      }
+    
     }
   
   }

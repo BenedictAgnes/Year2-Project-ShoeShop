@@ -5,3 +5,6 @@ run
 exit
 run
 exit
+run
+stop
+exit
