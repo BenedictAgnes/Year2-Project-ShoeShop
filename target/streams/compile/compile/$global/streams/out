@@ -1,3 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Project/Year2-Project-ShoeShop/conf/routes:17:1: value onsale is not a member of controllers.HomeController[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /onsale                     controllers.HomeController.onsale[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes:18:1: value womens is not a member of controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0mGET     /womens                     controllers.HomeController.womens[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

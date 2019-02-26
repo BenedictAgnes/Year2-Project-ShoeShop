@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project/Year2-Project-ShoeShop/conf/routes
-// @DATE:Mon Feb 25 16:58:27 GMT 2019
+// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
+// @DATE:Tue Feb 26 21:53:37 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -39,6 +39,16 @@ package controllers.javascript {
     }
 
   
+    // @LINE:18
+    def womens: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.womens",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "womens"})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -49,6 +59,16 @@ package controllers.javascript {
             return _wA({method:"GET", url:"""" + _prefix + """"})
           }
         
+        }
+      """
+    )
+  
+    // @LINE:17
+    def mens: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.mens",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mens"})
         }
       """
     )

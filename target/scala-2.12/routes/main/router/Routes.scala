@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project/Year2-Project-ShoeShop/conf/routes
-// @DATE:Mon Feb 25 16:58:27 GMT 2019
+// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
+// @DATE:Tue Feb 26 21:53:37 GMT 2019
 
 package router
 
@@ -53,6 +53,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """mens""", """controllers.HomeController.mens"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """womens""", """controllers.HomeController.womens"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -150,6 +152,42 @@ class Routes(
     )
   )
 
+  // @LINE:17
+  private[this] lazy val controllers_HomeController_mens5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("mens")))
+  )
+  private[this] lazy val controllers_HomeController_mens5_invoker = createInvoker(
+    HomeController_3.mens,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "mens",
+      Nil,
+      "GET",
+      this.prefix + """mens""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:18
+  private[this] lazy val controllers_HomeController_womens6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("womens")))
+  )
+  private[this] lazy val controllers_HomeController_womens6_invoker = createInvoker(
+    HomeController_3.womens,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "womens",
+      Nil,
+      "GET",
+      this.prefix + """womens""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -181,6 +219,18 @@ class Routes(
     case controllers_HomeController_index4_route(params@_) =>
       call { 
         controllers_HomeController_index4_invoker.call(HomeController_3.index)
+      }
+  
+    // @LINE:17
+    case controllers_HomeController_mens5_route(params@_) =>
+      call { 
+        controllers_HomeController_mens5_invoker.call(HomeController_3.mens)
+      }
+  
+    // @LINE:18
+    case controllers_HomeController_womens6_route(params@_) =>
+      call { 
+        controllers_HomeController_womens6_invoker.call(HomeController_3.womens)
       }
   }
 }

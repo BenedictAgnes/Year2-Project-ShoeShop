@@ -19,5 +19,12 @@ public class HomeController extends Controller {
     public Result index() {
         return ok(index.render());
     }
-  
+    public Result mens() {
+        return ok(mens.render());
+   }
+   
+   public Result womens() {
+    return ok(womens.render());
+}
+
 }
