@@ -17,3 +17,6 @@ GET     /aboutus                    controllers.HomeController.aboutus
 GET     /mens                       controllers.HomeController.mens
 GET     /womens                     controllers.HomeController.womens
 GET     /sales                      controllers.HomeController.sales
+GET     /javascripts/*file          controllers.Assets.at(path="/public/javascripts", file)
+GET     /images/*file               controllers.Assets.at(path="/public/images", file)
+GET     /kids                       controllers.HomeController.kids

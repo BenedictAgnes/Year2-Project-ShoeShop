@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Year2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 09:52:48 GMT 2019
+// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
+// @DATE:Wed Feb 27 16:29:51 GMT 2019
 
 import play.api.mvc.Call
 
@@ -51,6 +51,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "sales")
     }
   
+    // @LINE:22
+    def kids(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "kids")
+    }
+  
     // @LINE:16
     def aboutus(): Call = {
       
@@ -79,6 +85,25 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:20
+    def at(path:String, file:String): Call = {
+    
+      (path: @unchecked, file: @unchecked) match {
+      
+        // @LINE:20
+        case (path, file) if path == "/public/javascripts" =>
+          implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public/javascripts"))); _rrc
+          Call("GET", _prefix + { _defaultPrefix } + "javascripts/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
+      
+        // @LINE:21
+        case (path, file) if path == "/public/images" =>
+          implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public/images"))); _rrc
+          Call("GET", _prefix + { _defaultPrefix } + "images/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
+      
+      }
+    
+    }
   
     // @LINE:13
     def versioned(file:Asset): Call = {

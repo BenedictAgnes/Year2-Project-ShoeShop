@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Year2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 09:52:48 GMT 2019
+// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
+// @DATE:Wed Feb 27 16:29:51 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -69,6 +69,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:22
+    def kids: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.kids",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "kids"})
+        }
+      """
+    )
+  
     // @LINE:16
     def aboutus: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.aboutus",
@@ -102,6 +112,24 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:20
+    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.at",
+      """
+        function(path0,file1) {
+        
+          if (path0 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("/public/javascripts") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "javascripts/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+          }
+        
+          if (path0 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("/public/images") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "images/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+          }
+        
+        }
+      """
+    )
   
     // @LINE:13
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(

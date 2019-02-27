@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="@routes.Assets.at("/public/javascripts", "jquery.js")"></script>
 	<style>
 	    .footer { font-weight: bold; color: white; background-color: rgb(0, 0, 0); }
 	    .sidecol { font-weight: bold; background-color: lightblue; }
@@ -25,12 +26,20 @@
 		    <li><a href="/sales">Sales</a></li>
 			<li><a href="/mens">Mens</a></li>
 			<li><a href="/womens">Womens</a></li>
-		    <li><a href="/aboutus">About us</a></li>
+			<li><a href="/aboutus">About us</a></li>
+			<li><a href="/kids">Kids</a></li>
 		</ul>
 	    </div>
 	</nav>
-
+    
 	<div class="container-fluid">
+		<div class="row">
+				<div class="col-sm-12">
+						<h1><img src="@routes.Assets.at("/public/images", "sale.jfif")" </h1>
+						<h3></h3>
+						</div>
+		</div>
+
 	    <div class="row">
 		<div class="col-sm-3">
 		    <div class="well sidecol">
@@ -41,7 +50,7 @@
 		</div>
 		<div class="col-sm-6">
 		    <div class="midcol">
-			<h1>Sales</h1>
+		
 			<h3></h3>
 		    </div>
 		</div>

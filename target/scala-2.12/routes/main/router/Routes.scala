@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Year2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 09:52:48 GMT 2019
+// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
+// @DATE:Wed Feb 27 16:29:51 GMT 2019
 
 package router
 
@@ -57,6 +57,9 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """mens""", """controllers.HomeController.mens"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """womens""", """controllers.HomeController.womens"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """sales""", """controllers.HomeController.sales"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """javascripts/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/javascripts", file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/images", file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """kids""", """controllers.HomeController.kids"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -226,6 +229,60 @@ class Routes(
     )
   )
 
+  // @LINE:20
+  private[this] lazy val controllers_Assets_at9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("javascripts/"), DynamicPart("file", """.+""",false)))
+  )
+  private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
+    Assets_1.at(fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Assets",
+      "at",
+      Seq(classOf[String], classOf[String]),
+      "GET",
+      this.prefix + """javascripts/""" + "$" + """file<.+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val controllers_Assets_at10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("file", """.+""",false)))
+  )
+  private[this] lazy val controllers_Assets_at10_invoker = createInvoker(
+    Assets_1.at(fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Assets",
+      "at",
+      Seq(classOf[String], classOf[String]),
+      "GET",
+      this.prefix + """images/""" + "$" + """file<.+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_HomeController_kids11_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("kids")))
+  )
+  private[this] lazy val controllers_HomeController_kids11_invoker = createInvoker(
+    HomeController_3.kids,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "kids",
+      Nil,
+      "GET",
+      this.prefix + """kids""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -281,6 +338,24 @@ class Routes(
     case controllers_HomeController_sales8_route(params@_) =>
       call { 
         controllers_HomeController_sales8_invoker.call(HomeController_3.sales)
+      }
+  
+    // @LINE:20
+    case controllers_Assets_at9_route(params@_) =>
+      call(Param[String]("path", Right("/public/javascripts")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at9_invoker.call(Assets_1.at(path, file))
+      }
+  
+    // @LINE:21
+    case controllers_Assets_at10_route(params@_) =>
+      call(Param[String]("path", Right("/public/images")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at10_invoker.call(Assets_1.at(path, file))
+      }
+  
+    // @LINE:22
+    case controllers_HomeController_kids11_route(params@_) =>
+      call { 
+        controllers_HomeController_kids11_invoker.call(HomeController_3.kids)
       }
   }
 }

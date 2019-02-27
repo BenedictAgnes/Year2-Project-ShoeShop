@@ -36,14 +36,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src=""""),_display_(/*7.16*/routes/*7.22*/.Assets.at("/public/javascripts", "jquery.js")),format.raw/*7.68*/(""""></script>
 	<style>
-	    .footer """),format.raw/*8.14*/("""{"""),format.raw/*8.15*/(""" """),format.raw/*8.16*/("""font-weight: bold; color: white; background-color: rgb(0, 0, 0); """),format.raw/*8.81*/("""}"""),format.raw/*8.82*/("""
-	    """),format.raw/*9.6*/(""".sidecol """),format.raw/*9.15*/("""{"""),format.raw/*9.16*/(""" """),format.raw/*9.17*/("""font-weight: bold; background-color: lightblue; """),format.raw/*9.65*/("""}"""),format.raw/*9.66*/("""
-	    """),format.raw/*10.6*/(""".sidecol h2 """),format.raw/*10.18*/("""{"""),format.raw/*10.19*/(""" """),format.raw/*10.20*/("""font-weight: bold; """),format.raw/*10.39*/("""}"""),format.raw/*10.40*/("""
-	    """),format.raw/*11.6*/(""".midcol h1 """),format.raw/*11.17*/("""{"""),format.raw/*11.18*/(""" """),format.raw/*11.19*/("""margin-top: 2em; text-align: center; font-weight: bold; """),format.raw/*11.75*/("""}"""),format.raw/*11.76*/("""
-	    """),format.raw/*12.6*/(""".midcol h3 """),format.raw/*12.17*/("""{"""),format.raw/*12.18*/(""" """),format.raw/*12.19*/("""text-align: center; color: black; """),format.raw/*12.53*/("""}"""),format.raw/*12.54*/("""
-	    """),format.raw/*13.6*/(""".redtext """),format.raw/*13.15*/("""{"""),format.raw/*13.16*/(""" """),format.raw/*13.17*/("""color: rgb(235, 129, 129); """),format.raw/*13.44*/("""}"""),format.raw/*13.45*/("""
-	"""),format.raw/*14.2*/("""</style>
+	    .footer """),format.raw/*9.14*/("""{"""),format.raw/*9.15*/(""" """),format.raw/*9.16*/("""font-weight: bold; color: white; background-color: rgb(0, 0, 0); """),format.raw/*9.81*/("""}"""),format.raw/*9.82*/("""
+	    """),format.raw/*10.6*/(""".sidecol """),format.raw/*10.15*/("""{"""),format.raw/*10.16*/(""" """),format.raw/*10.17*/("""font-weight: bold; background-color: lightblue; """),format.raw/*10.65*/("""}"""),format.raw/*10.66*/("""
+	    """),format.raw/*11.6*/(""".sidecol h2 """),format.raw/*11.18*/("""{"""),format.raw/*11.19*/(""" """),format.raw/*11.20*/("""font-weight: bold; """),format.raw/*11.39*/("""}"""),format.raw/*11.40*/("""
+	    """),format.raw/*12.6*/(""".midcol h1 """),format.raw/*12.17*/("""{"""),format.raw/*12.18*/(""" """),format.raw/*12.19*/("""margin-top: 2em; text-align: center; font-weight: bold; """),format.raw/*12.75*/("""}"""),format.raw/*12.76*/("""
+	    """),format.raw/*13.6*/(""".midcol h3 """),format.raw/*13.17*/("""{"""),format.raw/*13.18*/(""" """),format.raw/*13.19*/("""text-align: center; color: black; """),format.raw/*13.53*/("""}"""),format.raw/*13.54*/("""
+	    """),format.raw/*14.6*/(""".redtext """),format.raw/*14.15*/("""{"""),format.raw/*14.16*/(""" """),format.raw/*14.17*/("""color: rgb(235, 129, 129); """),format.raw/*14.44*/("""}"""),format.raw/*14.45*/("""
+	"""),format.raw/*15.2*/("""</style>
 	<title>Mens Section</title>
     </head>
     <body>
@@ -57,32 +58,27 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 		    <li><a href="/sales">Sales</a></li>
 			<li><a href="/mens">Mens</a></li>
 			<li><a href="/womens">Womens</a></li>
-		    <li><a href="/aboutus">About us</a></li>
+			<li><a href="/aboutus">About us</a></li>
+			<li><a href="/kids">Kids</a></li>
 		</ul>
 	    </div>
 	</nav>
 
 	<div class="container-fluid">
 	    <div class="row">
-		<div class="col-sm-3">
-		    <div class="well sidecol">
-			<h2>News</h2>
-			<h3>Student Sales</h3>
-			<p>QUICK!! <span class="redtext">10% Student discounts</span> ends soon<span class="redtext"> Last Chance to get the shoes you always wanted</span>.
-		    </div>
-		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-12">
 		    <div class="midcol">
 			<h1>Mens Section</h1>
+			<img src=""""),_display_(/*40.15*/routes/*40.21*/.Assets.at("/public/images", "mens1.jfif")),format.raw/*40.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*41.15*/routes/*41.21*/.Assets.at("/public/images", "mens2.jfif")),format.raw/*41.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*42.15*/routes/*42.21*/.Assets.at("/public/images", "mens3.jfif")),format.raw/*42.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*43.15*/routes/*43.21*/.Assets.at("/public/images", "mens4.jfif")),format.raw/*43.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*44.15*/routes/*44.21*/.Assets.at("/public/images", "mens5.jfif")),format.raw/*44.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*45.15*/routes/*45.21*/.Assets.at("/public/images", "mens6.jfif")),format.raw/*45.63*/("""" width="250" height="180"/>
+			<img src=""""),_display_(/*46.15*/routes/*46.21*/.Assets.at("/public/images", "mens7.jfif")),format.raw/*46.63*/("""" width="250" height="180"/>
 			<h3></h3>
 		    </div>
-		</div>
-		<div class="col-sm-3">
-		    <div class="well sidecol">
-			<h2>Events</h2>
-			<h3>Clearance Sale</h3>
-			<p>Last Seasons shoes <span class="redtext">50%</span>Act now and get a 3rd pair for half price</p>
-		    </div>
+		
 		</div>
 	    </div>
 	    <div class="row">
@@ -113,11 +109,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 27 09:59:39 GMT 2019
-                  SOURCE: /home/wdd/Year2/Year2-Project-ShoeShop/app/views/mens.scala.html
-                  HASH: 06c98d38343f89a518a85f82438f14b43e16e6e2
-                  MATRIX: 1029->0|1318->262|1346->263|1374->264|1466->329|1494->330|1527->337|1563->346|1591->347|1619->348|1694->396|1722->397|1756->404|1796->416|1825->417|1854->418|1901->437|1930->438|1964->445|2003->456|2032->457|2061->458|2145->514|2174->515|2208->522|2247->533|2276->534|2305->535|2367->569|2396->570|2430->577|2467->586|2496->587|2525->588|2580->615|2609->616|2639->619
-                  LINES: 33->1|40->8|40->8|40->8|40->8|40->8|41->9|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14
+                  DATE: Wed Feb 27 16:29:51 GMT 2019
+                  SOURCE: /home/wdd/Project1/Year2-Project-ShoeShop/app/views/mens.scala.html
+                  HASH: 3bee76384fb2b6e411bdab92e6a6b3a18bc27de0
+                  MATRIX: 1029->0|1309->254|1323->260|1389->306|1452->342|1480->343|1508->344|1600->409|1628->410|1662->417|1699->426|1728->427|1757->428|1833->476|1862->477|1896->484|1936->496|1965->497|1994->498|2041->517|2070->518|2104->525|2143->536|2172->537|2201->538|2285->594|2314->595|2348->602|2387->613|2416->614|2445->615|2507->649|2536->650|2570->657|2607->666|2636->667|2665->668|2720->695|2749->696|2779->699|3506->1399|3521->1405|3584->1447|3655->1491|3670->1497|3733->1539|3804->1583|3819->1589|3882->1631|3953->1675|3968->1681|4031->1723|4102->1767|4117->1773|4180->1815|4251->1859|4266->1865|4329->1907|4400->1951|4415->1957|4478->1999
+                  LINES: 33->1|39->7|39->7|39->7|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14|46->14|46->14|46->14|46->14|46->14|47->15|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|75->43|75->43|75->43|76->44|76->44|76->44|77->45|77->45|77->45|78->46|78->46|78->46
                   -- GENERATED --
               */
           

@@ -36,14 +36,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src=""""),_display_(/*7.16*/routes/*7.22*/.Assets.at("/public/javascripts", "jquery.js")),format.raw/*7.68*/(""""></script>
 	<style>
-	    .footer """),format.raw/*8.14*/("""{"""),format.raw/*8.15*/(""" """),format.raw/*8.16*/("""font-weight: bold; color: white; background-color: rgb(0, 0, 0); """),format.raw/*8.81*/("""}"""),format.raw/*8.82*/("""
-	    """),format.raw/*9.6*/(""".sidecol """),format.raw/*9.15*/("""{"""),format.raw/*9.16*/(""" """),format.raw/*9.17*/("""font-weight: bold; background-color: lightblue; """),format.raw/*9.65*/("""}"""),format.raw/*9.66*/("""
-	    """),format.raw/*10.6*/(""".sidecol h2 """),format.raw/*10.18*/("""{"""),format.raw/*10.19*/(""" """),format.raw/*10.20*/("""font-weight: bold; """),format.raw/*10.39*/("""}"""),format.raw/*10.40*/("""
-	    """),format.raw/*11.6*/(""".midcol h1 """),format.raw/*11.17*/("""{"""),format.raw/*11.18*/(""" """),format.raw/*11.19*/("""margin-top: 2em; text-align: center; font-weight: bold; """),format.raw/*11.75*/("""}"""),format.raw/*11.76*/("""
-	    """),format.raw/*12.6*/(""".midcol h3 """),format.raw/*12.17*/("""{"""),format.raw/*12.18*/(""" """),format.raw/*12.19*/("""text-align: center; color: black; """),format.raw/*12.53*/("""}"""),format.raw/*12.54*/("""
-	    """),format.raw/*13.6*/(""".redtext """),format.raw/*13.15*/("""{"""),format.raw/*13.16*/(""" """),format.raw/*13.17*/("""color: rgb(235, 129, 129); """),format.raw/*13.44*/("""}"""),format.raw/*13.45*/("""
-	"""),format.raw/*14.2*/("""</style>
+	    .footer """),format.raw/*9.14*/("""{"""),format.raw/*9.15*/(""" """),format.raw/*9.16*/("""font-weight: bold; color: white; background-color: rgb(0, 0, 0); """),format.raw/*9.81*/("""}"""),format.raw/*9.82*/("""
+	    """),format.raw/*10.6*/(""".sidecol """),format.raw/*10.15*/("""{"""),format.raw/*10.16*/(""" """),format.raw/*10.17*/("""font-weight: bold; background-color: lightblue; """),format.raw/*10.65*/("""}"""),format.raw/*10.66*/("""
+	    """),format.raw/*11.6*/(""".sidecol h2 """),format.raw/*11.18*/("""{"""),format.raw/*11.19*/(""" """),format.raw/*11.20*/("""font-weight: bold; """),format.raw/*11.39*/("""}"""),format.raw/*11.40*/("""
+	    """),format.raw/*12.6*/(""".midcol h1 """),format.raw/*12.17*/("""{"""),format.raw/*12.18*/(""" """),format.raw/*12.19*/("""margin-top: 2em; text-align: center; font-weight: bold; """),format.raw/*12.75*/("""}"""),format.raw/*12.76*/("""
+	    """),format.raw/*13.6*/(""".midcol h3 """),format.raw/*13.17*/("""{"""),format.raw/*13.18*/(""" """),format.raw/*13.19*/("""text-align: center; color: black; """),format.raw/*13.53*/("""}"""),format.raw/*13.54*/("""
+	    """),format.raw/*14.6*/(""".redtext """),format.raw/*14.15*/("""{"""),format.raw/*14.16*/(""" """),format.raw/*14.17*/("""color: rgb(235, 129, 129); """),format.raw/*14.44*/("""}"""),format.raw/*14.45*/("""
+	"""),format.raw/*15.2*/("""</style>
 	<title>Soles</title>
     </head>
     <body>
@@ -57,12 +58,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 		    <li><a href="/sales">Sales</a></li>
 			<li><a href="/mens">Mens</a></li>
 			<li><a href="/womens">Womens</a></li>
-		    <li><a href="/aboutus">About us</a></li>
+			<li><a href="/aboutus">About us</a></li>
+			<li><a href="/kids">Kids</a></li>
 		</ul>
 	    </div>
 	</nav>
-
+    
 	<div class="container-fluid">
+		<div class="row">
+				<div class="col-sm-12">
+						<h1><img src=""""),_display_(/*38.22*/routes/*38.28*/.Assets.at("/public/images", "sale.jfif")),format.raw/*38.69*/("""" </h1>
+						<h3></h3>
+						</div>
+		</div>
+
 	    <div class="row">
 		<div class="col-sm-3">
 		    <div class="well sidecol">
@@ -73,7 +82,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 		</div>
 		<div class="col-sm-6">
 		    <div class="midcol">
-			<h1>Sales</h1>
+		
 			<h3></h3>
 		    </div>
 		</div>
@@ -113,11 +122,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 27 09:59:39 GMT 2019
-                  SOURCE: /home/wdd/Year2/Year2-Project-ShoeShop/app/views/sales.scala.html
-                  HASH: b825ac2811cbabe085a3d66d9901450af54b9865
-                  MATRIX: 1030->0|1312->255|1340->256|1368->257|1460->322|1488->323|1520->329|1556->338|1584->339|1612->340|1687->388|1715->389|1748->395|1788->407|1817->408|1846->409|1893->428|1922->429|1955->435|1994->446|2023->447|2052->448|2136->504|2165->505|2198->511|2237->522|2266->523|2295->524|2357->558|2386->559|2419->565|2456->574|2485->575|2514->576|2569->603|2598->604|2627->606
-                  LINES: 33->1|40->8|40->8|40->8|40->8|40->8|41->9|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14
+                  DATE: Wed Feb 27 16:29:51 GMT 2019
+                  SOURCE: /home/wdd/Project1/Year2-Project-ShoeShop/app/views/sales.scala.html
+                  HASH: 5d79c1ec196a2904100f6160350e584fc69d9801
+                  MATRIX: 1030->0|1304->248|1318->254|1384->300|1445->334|1473->335|1501->336|1593->401|1621->402|1654->408|1691->417|1720->418|1749->419|1825->467|1854->468|1887->474|1927->486|1956->487|1985->488|2032->507|2061->508|2094->514|2133->525|2162->526|2191->527|2275->583|2304->584|2337->590|2376->601|2405->602|2434->603|2496->637|2525->638|2558->644|2595->653|2624->654|2653->655|2708->682|2737->683|2766->685|3422->1314|3437->1320|3499->1361
+                  LINES: 33->1|39->7|39->7|39->7|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14|46->14|46->14|46->14|46->14|46->14|47->15|70->38|70->38|70->38
                   -- GENERATED --
               */
           

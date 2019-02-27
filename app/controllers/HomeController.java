@@ -32,5 +32,7 @@ public class HomeController extends Controller {
 public Result sales() {
     return ok(sales.render());
 }
-
+public Result kids() {
+    return ok(kids.render());
+}
 }
