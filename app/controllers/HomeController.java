@@ -26,5 +26,11 @@ public class HomeController extends Controller {
    public Result womens() {
     return ok(womens.render());
 }
+    public Result aboutus() {
+    return ok(aboutus.render());
+}
+public Result sales() {
+    return ok(sales.render());
+}
 
 }

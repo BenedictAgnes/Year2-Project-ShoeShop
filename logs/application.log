@@ -1,11 +1,253 @@
-2019-02-26 21:55:12,986 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Starting application at 2019-02-26T21:55:12.986Z
-2019-02-26 21:55:13,611 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-02-27 09:39:52,842 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Starting application at 2019-02-27T09:39:52.842Z
+2019-02-27 09:39:53,046 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2019-02-26 21:55:14,116 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
-2019-02-26 21:55:39,418 [INFO] from play.core.server.AkkaHttpServer in pool-85-thread-2 - Stopping server...
-2019-02-26 21:55:39,501 [INFO] from application in application-akka.actor.default-dispatcher-7 - ApplicationTimer demo: Stopping application at 2019-02-26T21:55:39.501Z after 27s.
+2019-02-27 09:39:53,284 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev) (no global state)
+2019-02-27 09:43:37,835 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Stopping application at 2019-02-27T09:43:37.835Z after 225s.
+2019-02-27 09:43:38,399 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-11 - ApplicationTimer demo: Starting application at 2019-02-27T09:43:38.399Z
+2019-02-27 09:43:38,572 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:43:38,616 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2019-02-27 09:44:42,563 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2019-02-27T09:44:42.563Z after 64s.
+2019-02-27 09:44:42,961 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-11 - ApplicationTimer demo: Starting application at 2019-02-27T09:44:42.961Z
+2019-02-27 09:44:43,139 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:44:43,187 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2019-02-27 09:48:03,797 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Stopping application at 2019-02-27T09:48:03.797Z after 201s.
+2019-02-27 09:48:04,135 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - ApplicationTimer demo: Starting application at 2019-02-27T09:48:04.135Z
+2019-02-27 09:48:04,221 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-20 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:48:04,249 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-20 - Application started (Dev) (no global state)
+2019-02-27 09:50:10,926 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-19 - 
+
+! @7b3gacoi7 - Internal server error, for (GET) [/mens] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value aboutus is not a member of controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:34)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:29)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:25)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:52)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:52)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:77)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
+	at play.runsupport.Reloader.reload(Reloader.scala:413)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:126)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:253)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:149)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1207)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:519)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:411)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:588)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:472)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:563)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:745)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:760)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:670)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:557)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:225)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-02-27 09:50:11,980 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-26 - 
+
+! @7b3gad0g4 - Internal server error, for (GET) [/] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value aboutus is not a member of controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:34)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:29)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:25)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:52)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:52)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:77)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
+	at play.runsupport.Reloader.reload(Reloader.scala:413)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:126)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:253)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:149)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1207)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:519)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:411)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:588)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:472)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:563)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:745)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:760)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:670)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:557)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:225)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-02-27 09:50:56,412 [INFO] from application in application-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Stopping application at 2019-02-27T09:50:56.412Z after 172s.
+2019-02-27 09:50:56,630 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-28 - ApplicationTimer demo: Starting application at 2019-02-27T09:50:56.630Z
+2019-02-27 09:50:56,710 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-28 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:50:56,726 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-28 - Application started (Dev) (no global state)
+2019-02-27 09:52:50,297 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-25 - 
+
+! @7b3gam0j5 - Internal server error, for (GET) [/sale] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[value sales is not a member of controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:35)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:34)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:29)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:25)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:52)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:52)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:77)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:413)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:51)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:56)
+	at play.runsupport.Reloader.reload(Reloader.scala:413)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:126)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:253)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:149)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1207)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:519)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:411)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:588)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:472)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:563)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:745)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:760)
+	at akka.actor.Actor.aroundReceive(Actor.scala:517)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:670)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:557)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:225)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2019-02-27 09:53:02,593 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2019-02-27T09:53:02.593Z after 126s.
+2019-02-27 09:53:02,826 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-25 - ApplicationTimer demo: Starting application at 2019-02-27T09:53:02.826Z
+2019-02-27 09:53:02,893 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-25 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:53:02,907 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-25 - Application started (Dev) (no global state)
+2019-02-27 09:53:53,736 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Stopping application at 2019-02-27T09:53:53.736Z after 51s.
+2019-02-27 09:53:53,943 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-25 - ApplicationTimer demo: Starting application at 2019-02-27T09:53:53.943Z
+2019-02-27 09:53:54,001 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-25 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:53:54,012 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-25 - Application started (Dev) (no global state)
+2019-02-27 09:54:24,146 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Stopping application at 2019-02-27T09:54:24.146Z after 31s.
+2019-02-27 09:54:24,340 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-27 - ApplicationTimer demo: Starting application at 2019-02-27T09:54:24.340Z
+2019-02-27 09:54:24,402 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-27 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:54:24,413 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-27 - Application started (Dev) (no global state)
+2019-02-27 09:56:04,128 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2019-02-27T09:56:04.128Z after 100s.
+2019-02-27 09:56:04,320 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-31 - ApplicationTimer demo: Starting application at 2019-02-27T09:56:04.320Z
+2019-02-27 09:56:04,403 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-31 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:56:04,412 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-31 - Application started (Dev) (no global state)
+2019-02-27 09:57:23,301 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2019-02-27T09:57:23.301Z after 79s.
+2019-02-27 09:57:23,446 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-31 - ApplicationTimer demo: Starting application at 2019-02-27T09:57:23.446Z
+2019-02-27 09:57:23,502 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-31 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:57:23,515 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-31 - Application started (Dev) (no global state)
+2019-02-27 09:59:41,316 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Stopping application at 2019-02-27T09:59:41.316Z after 138s.
+2019-02-27 09:59:41,470 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-36 - ApplicationTimer demo: Starting application at 2019-02-27T09:59:41.470Z
+2019-02-27 09:59:41,549 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-36 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 09:59:41,555 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-36 - Application started (Dev) (no global state)
+2019-02-27 10:05:44,951 [INFO] from play.core.server.AkkaHttpServer in pool-6-thread-1 - Stopping server...
+2019-02-27 10:05:46,843 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Stopping application at 2019-02-27T10:05:46.843Z after 365s.
+2019-02-27 10:05:47,007 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Starting application at 2019-02-27T10:05:47.007Z
+2019-02-27 10:05:47,074 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-41 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2019-02-27 10:05:47,090 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-41 - Application started (Dev) (no global state)
+2019-02-27 10:05:47,092 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Stopping application at 2019-02-27T10:05:47.092Z after 0s.

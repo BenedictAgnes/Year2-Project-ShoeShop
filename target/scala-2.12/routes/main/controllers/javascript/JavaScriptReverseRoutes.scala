@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
-// @DATE:Tue Feb 26 21:53:37 GMT 2019
+// @SOURCE:/home/wdd/Year2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Wed Feb 27 09:52:48 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -49,6 +49,36 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:17
+    def mens: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.mens",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mens"})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def sales: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.sales",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sales"})
+        }
+      """
+    )
+  
+    // @LINE:16
+    def aboutus: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.aboutus",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "aboutus"})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -59,16 +89,6 @@ package controllers.javascript {
             return _wA({method:"GET", url:"""" + _prefix + """"})
           }
         
-        }
-      """
-    )
-  
-    // @LINE:17
-    def mens: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.mens",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mens"})
         }
       """
     )

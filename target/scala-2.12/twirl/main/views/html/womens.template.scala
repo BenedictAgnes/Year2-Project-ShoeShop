@@ -50,12 +50,14 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 	<nav class="navbar navbar-inverse">
 	    <div class="container-fluid">
 		<div class="navbar-header">
-		    <a class="navbar-brand" href="#">Soles</a>
+		    <a class="navbar-brand" href="/">Soles</a>
 		</div>
 		<ul class="nav navbar-nav">
-		    <li class="active"><a href="#">Home</a></li>
-		    <li><a href="#">Products</a></li>
-		    <li><a href="#">About us</a></li>
+		    <li class="active"><a href="/">Home</a></li>
+		    <li><a href="/sales">Sales</a></li>
+			<li><a href="/mens">Mens</a></li>
+			<li><a href="/womens">Womens</a></li>
+		    <li><a href="/aboutus">About us</a></li>
 		</ul>
 	    </div>
 	</nav>
@@ -66,7 +68,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 		    <div class="well sidecol">
 			<h2>News</h2>
 			<h3>Student Sales</h3>
-			<p>QUICK!!<span class="redtext">10% Student discounts</span> ends soon<span class="redtext">Last Chance to get the shoes you always wanted</span>.
+			<p>QUICK!! <span class="redtext">10% Student discounts</span> ends soon<span class="redtext"> Last Chance to get the shoes you always wanted</span>.
 		    </div>
 		</div>
 		<div class="col-sm-6">
@@ -111,9 +113,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Tue Feb 26 21:54:39 GMT 2019
-                  SOURCE: /home/wdd/Project1/Year2-Project-ShoeShop/app/views/womens.scala.html
-                  HASH: 9c0658c9c6d824fa920fc366820498a5852a4fa3
+                  DATE: Wed Feb 27 10:05:45 GMT 2019
+                  SOURCE: /home/wdd/Year2/Year2-Project-ShoeShop/app/views/womens.scala.html
+                  HASH: 1cffd312e3d3271de3e180acc19ec850325eef7f
                   MATRIX: 1031->0|1320->262|1348->263|1376->264|1468->329|1496->330|1529->337|1565->346|1593->347|1621->348|1696->396|1724->397|1758->404|1798->416|1827->417|1856->418|1903->437|1932->438|1966->445|2005->456|2034->457|2063->458|2147->514|2176->515|2210->522|2249->533|2278->534|2307->535|2369->569|2398->570|2432->577|2469->586|2498->587|2527->588|2582->615|2611->616|2641->619
                   LINES: 33->1|40->8|40->8|40->8|40->8|40->8|41->9|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14
                   -- GENERATED --

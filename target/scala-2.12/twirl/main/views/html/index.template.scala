@@ -50,12 +50,14 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 	<nav class="navbar navbar-inverse">
 	    <div class="container-fluid">
 		<div class="navbar-header">
-		    <a class="navbar-brand" href="#">Soles</a>
+		    <a class="navbar-brand" href="/">Soles</a>
 		</div>
 		<ul class="nav navbar-nav">
-		    <li class="active"><a href="#">Home</a></li>
-		    <li><a href="#">Products</a></li>
-		    <li><a href="#">About us</a></li>
+		    <li class="active"><a href="/">Home</a></li>
+		    <li><a href="/sales">Sales</a></li>
+			<li><a href="/mens">Mens</a></li>
+			<li><a href="/womens">Womens</a></li>
+		    <li><a href="/aboutus">About us</a></li>
 		</ul>
 	    </div>
 	</nav>
@@ -111,9 +113,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Tue Feb 26 21:44:45 GMT 2019
-                  SOURCE: /home/wdd/Project1/Year2-Project-ShoeShop/app/views/index.scala.html
-                  HASH: 8fd130b24f21d0f1dd0cf3008ec921ab1ba234b1
+                  DATE: Wed Feb 27 09:56:01 GMT 2019
+                  SOURCE: /home/wdd/Year2/Year2-Project-ShoeShop/app/views/index.scala.html
+                  HASH: 23afa124f7c39ec0c64356053c44cf834b684233
                   MATRIX: 1030->0|1319->262|1347->263|1375->264|1467->329|1495->330|1528->337|1564->346|1592->347|1620->348|1695->396|1723->397|1757->404|1797->416|1826->417|1855->418|1902->437|1931->438|1965->445|2004->456|2033->457|2062->458|2146->514|2175->515|2209->522|2248->533|2277->534|2306->535|2368->569|2397->570|2431->577|2468->586|2497->587|2526->588|2581->615|2610->616|2640->619
                   LINES: 33->1|40->8|40->8|40->8|40->8|40->8|41->9|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14
                   -- GENERATED --

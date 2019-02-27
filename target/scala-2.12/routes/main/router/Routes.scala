@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
-// @DATE:Tue Feb 26 21:53:37 GMT 2019
+// @SOURCE:/home/wdd/Year2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Wed Feb 27 09:52:48 GMT 2019
 
 package router
 
@@ -53,8 +53,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """aboutus""", """controllers.HomeController.aboutus"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """mens""", """controllers.HomeController.mens"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """womens""", """controllers.HomeController.womens"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """sales""", """controllers.HomeController.sales"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -152,11 +154,29 @@ class Routes(
     )
   )
 
+  // @LINE:16
+  private[this] lazy val controllers_HomeController_aboutus5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("aboutus")))
+  )
+  private[this] lazy val controllers_HomeController_aboutus5_invoker = createInvoker(
+    HomeController_3.aboutus,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "aboutus",
+      Nil,
+      "GET",
+      this.prefix + """aboutus""",
+      """""",
+      Seq()
+    )
+  )
+
   // @LINE:17
-  private[this] lazy val controllers_HomeController_mens5_route = Route("GET",
+  private[this] lazy val controllers_HomeController_mens6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("mens")))
   )
-  private[this] lazy val controllers_HomeController_mens5_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_mens6_invoker = createInvoker(
     HomeController_3.mens,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -171,10 +191,10 @@ class Routes(
   )
 
   // @LINE:18
-  private[this] lazy val controllers_HomeController_womens6_route = Route("GET",
+  private[this] lazy val controllers_HomeController_womens7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("womens")))
   )
-  private[this] lazy val controllers_HomeController_womens6_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_womens7_invoker = createInvoker(
     HomeController_3.womens,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -183,6 +203,24 @@ class Routes(
       Nil,
       "GET",
       this.prefix + """womens""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_HomeController_sales8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("sales")))
+  )
+  private[this] lazy val controllers_HomeController_sales8_invoker = createInvoker(
+    HomeController_3.sales,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "sales",
+      Nil,
+      "GET",
+      this.prefix + """sales""",
       """""",
       Seq()
     )
@@ -221,16 +259,28 @@ class Routes(
         controllers_HomeController_index4_invoker.call(HomeController_3.index)
       }
   
-    // @LINE:17
-    case controllers_HomeController_mens5_route(params@_) =>
+    // @LINE:16
+    case controllers_HomeController_aboutus5_route(params@_) =>
       call { 
-        controllers_HomeController_mens5_invoker.call(HomeController_3.mens)
+        controllers_HomeController_aboutus5_invoker.call(HomeController_3.aboutus)
+      }
+  
+    // @LINE:17
+    case controllers_HomeController_mens6_route(params@_) =>
+      call { 
+        controllers_HomeController_mens6_invoker.call(HomeController_3.mens)
       }
   
     // @LINE:18
-    case controllers_HomeController_womens6_route(params@_) =>
+    case controllers_HomeController_womens7_route(params@_) =>
       call { 
-        controllers_HomeController_womens6_invoker.call(HomeController_3.womens)
+        controllers_HomeController_womens7_invoker.call(HomeController_3.womens)
+      }
+  
+    // @LINE:19
+    case controllers_HomeController_sales8_route(params@_) =>
+      call { 
+        controllers_HomeController_sales8_invoker.call(HomeController_3.sales)
       }
   }
 }
