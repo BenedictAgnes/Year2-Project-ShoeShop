@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 16:29:51 GMT 2019
+// @SOURCE:/home/wdd/project/projectyr2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Fri Mar 01 09:50:45 GMT 2019
 
 import play.api.mvc.Call
 
@@ -75,6 +75,12 @@ package controllers {
       
       }
     
+    }
+  
+    // @LINE:23
+    def login(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
   }

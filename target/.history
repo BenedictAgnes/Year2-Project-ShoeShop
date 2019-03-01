@@ -15,3 +15,7 @@ run
 exit
 run
 exit
+run
+compile
+h2-browser
+exit

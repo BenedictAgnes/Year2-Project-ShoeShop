@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 16:29:51 GMT 2019
+// @SOURCE:/home/wdd/project/projectyr2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Fri Mar 01 09:50:45 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -99,6 +99,16 @@ package controllers.javascript {
             return _wA({method:"GET", url:"""" + _prefix + """"})
           }
         
+        }
+      """
+    )
+  
+    // @LINE:23
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.login",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
         }
       """
     )

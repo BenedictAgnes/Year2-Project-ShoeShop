@@ -35,4 +35,7 @@ public Result sales() {
 public Result kids() {
     return ok(kids.render());
 }
+public Result login() {
+    return ok(login.render());
+}
 }

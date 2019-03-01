@@ -58,7 +58,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 			<li><a href="/mens">Mens</a></li>
 			<li><a href="/womens">Womens</a></li>
 			<li><a href="/aboutus">About us</a></li>
-			<li><a href="/kids">Kids</a></li>
+			<li><a href="/kids">Kids</a></li>0
+			<br></br>
+			<li><a href="/login">login</a></li>
 		</ul>
 	    </div>
 	</nav>
@@ -114,9 +116,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Feb 27 16:29:51 GMT 2019
-                  SOURCE: /home/wdd/Project1/Year2-Project-ShoeShop/app/views/aboutus.scala.html
-                  HASH: e7d3ae4edd75d7e3912b03cb6951ca09f594c1d2
+                  DATE: Fri Mar 01 09:54:32 GMT 2019
+                  SOURCE: /home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/views/aboutus.scala.html
+                  HASH: a565315520f434c72ae998c320c287bf849a2591
                   MATRIX: 1032->0|1314->255|1342->256|1370->257|1462->322|1490->323|1522->329|1558->338|1586->339|1614->340|1689->388|1717->389|1750->395|1790->407|1819->408|1848->409|1895->428|1924->429|1957->435|1996->446|2025->447|2054->448|2138->504|2167->505|2200->511|2239->522|2268->523|2297->524|2359->558|2388->559|2421->565|2458->574|2487->575|2516->576|2571->603|2600->604|2629->606
                   LINES: 33->1|40->8|40->8|40->8|40->8|40->8|41->9|41->9|41->9|41->9|41->9|41->9|42->10|42->10|42->10|42->10|42->10|42->10|43->11|43->11|43->11|43->11|43->11|43->11|44->12|44->12|44->12|44->12|44->12|44->12|45->13|45->13|45->13|45->13|45->13|45->13|46->14
                   -- GENERATED --

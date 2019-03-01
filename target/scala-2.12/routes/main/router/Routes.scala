@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Project1/Year2-Project-ShoeShop/conf/routes
-// @DATE:Wed Feb 27 16:29:51 GMT 2019
+// @SOURCE:/home/wdd/project/projectyr2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Fri Mar 01 09:50:45 GMT 2019
 
 package router
 
@@ -60,6 +60,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """javascripts/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/javascripts", file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/images", file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """kids""", """controllers.HomeController.kids"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.login"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -283,6 +284,24 @@ class Routes(
     )
   )
 
+  // @LINE:23
+  private[this] lazy val controllers_HomeController_login12_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
+  )
+  private[this] lazy val controllers_HomeController_login12_invoker = createInvoker(
+    HomeController_3.login,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "login",
+      Nil,
+      "GET",
+      this.prefix + """login""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -356,6 +375,12 @@ class Routes(
     case controllers_HomeController_kids11_route(params@_) =>
       call { 
         controllers_HomeController_kids11_invoker.call(HomeController_3.kids)
+      }
+  
+    // @LINE:23
+    case controllers_HomeController_login12_route(params@_) =>
+      call { 
+        controllers_HomeController_login12_invoker.call(HomeController_3.login)
       }
   }
 }

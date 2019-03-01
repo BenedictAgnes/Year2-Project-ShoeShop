@@ -1,4 +1,22 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Project1/Year2-Project-ShoeShop/app/views/index.scala.html:22:50: too many arguments (2) for method at: (file: String)play.api.mvc.Call[0m
-[0m[[0m[31merror[0m] [0m[0m			<img src="@routes.Assets.at("/public/images", "vans.gif")" />[0m
-[0m[[0m[31merror[0m] [0m[0m			                                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/views/login.scala.html:1:9: object User is not a member of package models.users[0m
+[0m[[0m[31merror[0m] [0m[0m@import models.users.User[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/model/users/User.java:4:8: object persistence is not a member of package javax[0m
+[0m[[0m[31merror[0m] [0m[0mimport javax.persistence.*;[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/model/users/User.java:6:8: object ebean is not a member of package io[0m
+[0m[[0m[31merror[0m] [0m[0mimport io.ebean.*;[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/model/users/User.java:19:27: not found: type Model[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class User extends Model {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/views/login.scala.html:6:16: too many arguments (2) for method apply: (title: String)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in object main[0m
+[0m[[0m[31merror[0m] [0m[0m@main("Login", user) {[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/views/login.scala.html:12:40: value message is not a member of java.util.Optional[play.data.validation.ValidationError][0m
+[0m[[0m[31merror[0m] [0m[0m                @loginForm.globalError.message;[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/project/projectyr2/Year2-Project-ShoeShop/app/views/login.scala.html:22:34: object security is not a member of package controllers[0m
+[0m[[0m[31merror[0m] [0m[0m        @helper.form(controllers.security.routes.LoginCtrl.loginSubmit()) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
