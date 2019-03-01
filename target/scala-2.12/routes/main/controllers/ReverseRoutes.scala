@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/project/projectyr2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Fri Mar 01 09:50:45 GMT 2019
+// @SOURCE:/home/wdd/yr2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Fri Mar 01 12:29:49 GMT 2019
 
 import play.api.mvc.Call
 

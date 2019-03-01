@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/project/projectyr2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Fri Mar 01 09:50:45 GMT 2019
+// @SOURCE:/home/wdd/yr2/Year2-Project-ShoeShop/conf/routes
+// @DATE:Fri Mar 01 12:29:49 GMT 2019
 
 package router
 
@@ -15,11 +15,11 @@ import _root_.play.libs.F
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
-  HomeController_3: controllers.HomeController,
+  HomeController_0: controllers.HomeController,
   // @LINE:8
-  CountController_2: controllers.CountController,
+  CountController_3: controllers.CountController,
   // @LINE:10
-  AsyncController_0: controllers.AsyncController,
+  AsyncController_2: controllers.AsyncController,
   // @LINE:13
   Assets_1: controllers.Assets,
   val prefix: String
@@ -28,19 +28,18 @@ class Routes(
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
-    HomeController_3: controllers.HomeController,
+    HomeController_0: controllers.HomeController,
     // @LINE:8
-    CountController_2: controllers.CountController,
+    CountController_3: controllers.CountController,
     // @LINE:10
-    AsyncController_0: controllers.AsyncController,
+    AsyncController_2: controllers.AsyncController,
     // @LINE:13
     Assets_1: controllers.Assets
-  ) = this(errorHandler, HomeController_3, CountController_2, AsyncController_0, Assets_1, "/")
+  ) = this(errorHandler, HomeController_0, CountController_3, AsyncController_2, Assets_1, "/")
 
-  def withPrefix(addPrefix: String): Routes = {
-    val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
+  def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_3, CountController_2, AsyncController_0, Assets_1, prefix)
+    new Routes(errorHandler, HomeController_0, CountController_3, AsyncController_2, Assets_1, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -73,7 +72,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_3.index,
+    HomeController_0.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -91,7 +90,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("count")))
   )
   private[this] lazy val controllers_CountController_count1_invoker = createInvoker(
-    CountController_2.count,
+    CountController_3.count,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.CountController",
@@ -109,7 +108,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("message")))
   )
   private[this] lazy val controllers_AsyncController_message2_invoker = createInvoker(
-    AsyncController_0.message,
+    AsyncController_2.message,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.AsyncController",
@@ -145,7 +144,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_HomeController_index4_invoker = createInvoker(
-    HomeController_3.index,
+    HomeController_0.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -163,7 +162,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("aboutus")))
   )
   private[this] lazy val controllers_HomeController_aboutus5_invoker = createInvoker(
-    HomeController_3.aboutus,
+    HomeController_0.aboutus,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -181,7 +180,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("mens")))
   )
   private[this] lazy val controllers_HomeController_mens6_invoker = createInvoker(
-    HomeController_3.mens,
+    HomeController_0.mens,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -199,7 +198,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("womens")))
   )
   private[this] lazy val controllers_HomeController_womens7_invoker = createInvoker(
-    HomeController_3.womens,
+    HomeController_0.womens,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -217,7 +216,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("sales")))
   )
   private[this] lazy val controllers_HomeController_sales8_invoker = createInvoker(
-    HomeController_3.sales,
+    HomeController_0.sales,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -271,7 +270,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("kids")))
   )
   private[this] lazy val controllers_HomeController_kids11_invoker = createInvoker(
-    HomeController_3.kids,
+    HomeController_0.kids,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -289,7 +288,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
   private[this] lazy val controllers_HomeController_login12_invoker = createInvoker(
-    HomeController_3.login,
+    HomeController_0.login,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -308,19 +307,19 @@ class Routes(
     // @LINE:6
     case controllers_HomeController_index0_route(params@_) =>
       call { 
-        controllers_HomeController_index0_invoker.call(HomeController_3.index)
+        controllers_HomeController_index0_invoker.call(HomeController_0.index)
       }
   
     // @LINE:8
     case controllers_CountController_count1_route(params@_) =>
       call { 
-        controllers_CountController_count1_invoker.call(CountController_2.count)
+        controllers_CountController_count1_invoker.call(CountController_3.count)
       }
   
     // @LINE:10
     case controllers_AsyncController_message2_route(params@_) =>
       call { 
-        controllers_AsyncController_message2_invoker.call(AsyncController_0.message)
+        controllers_AsyncController_message2_invoker.call(AsyncController_2.message)
       }
   
     // @LINE:13
@@ -332,31 +331,31 @@ class Routes(
     // @LINE:15
     case controllers_HomeController_index4_route(params@_) =>
       call { 
-        controllers_HomeController_index4_invoker.call(HomeController_3.index)
+        controllers_HomeController_index4_invoker.call(HomeController_0.index)
       }
   
     // @LINE:16
     case controllers_HomeController_aboutus5_route(params@_) =>
       call { 
-        controllers_HomeController_aboutus5_invoker.call(HomeController_3.aboutus)
+        controllers_HomeController_aboutus5_invoker.call(HomeController_0.aboutus)
       }
   
     // @LINE:17
     case controllers_HomeController_mens6_route(params@_) =>
       call { 
-        controllers_HomeController_mens6_invoker.call(HomeController_3.mens)
+        controllers_HomeController_mens6_invoker.call(HomeController_0.mens)
       }
   
     // @LINE:18
     case controllers_HomeController_womens7_route(params@_) =>
       call { 
-        controllers_HomeController_womens7_invoker.call(HomeController_3.womens)
+        controllers_HomeController_womens7_invoker.call(HomeController_0.womens)
       }
   
     // @LINE:19
     case controllers_HomeController_sales8_route(params@_) =>
       call { 
-        controllers_HomeController_sales8_invoker.call(HomeController_3.sales)
+        controllers_HomeController_sales8_invoker.call(HomeController_0.sales)
       }
   
     // @LINE:20
@@ -374,13 +373,13 @@ class Routes(
     // @LINE:22
     case controllers_HomeController_kids11_route(params@_) =>
       call { 
-        controllers_HomeController_kids11_invoker.call(HomeController_3.kids)
+        controllers_HomeController_kids11_invoker.call(HomeController_0.kids)
       }
   
     // @LINE:23
     case controllers_HomeController_login12_route(params@_) =>
       call { 
-        controllers_HomeController_login12_invoker.call(HomeController_3.login)
+        controllers_HomeController_login12_invoker.call(HomeController_0.login)
       }
   }
 }
