@@ -1,17 +1,16 @@
-@import models.users.User
-@import models.users.Login
-@(loginForm: Form[Login], user: User)
+@(loginForm: Form[models.users.Login])
 @import helper._
 
-@main("Login", user) {
-    <p class="lead">Product Catalogue</p>
-    <div class="col-xs-5">
+@main("Login") {
         <h3>Sign in</h3>
         @if(loginForm.hasGlobalErrors) {
             <p class="alert alert-warning">
-                @loginForm.globalError.message;
+                @for(e <- loginForm.globalErrors) {
+                    @e.message<br/>
+                }
             </p>
         }
+
         @if(flash.containsKey("error")) {
             <p class="alert alert-warning">
                 @flash.get("loginRequired")
@@ -19,7 +18,7 @@
         }
 
 
-        @helper.form(controllers.security.routes.LoginCtrl.loginSubmit()) {
+        @helper.form(action = controllers.routes.LoginController.loginSubmit()) {
             @CSRF.formField
 
             <div class="form-group">
@@ -34,5 +33,5 @@
                 <input type="submit" value="Sign In" class="btn btn-primary">
             </div>
         }
-    </div>
+
 }

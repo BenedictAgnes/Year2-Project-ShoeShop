@@ -1,8 +1,8 @@
 package models.users;
 
 import java.util.*;
-
-
+import javax.persistence.*;
+import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -24,7 +24,7 @@ public class User extends Model {
 
     @Constraints.Required
     private String name;
-
+   
     @Constraints.Required
     private String password;
 
@@ -77,6 +77,7 @@ public class User extends Model {
     public static List<User> findAll() {
         return User.find.all();
     }
+
 
     public static User authenticate(String email, String password) {
         return find.query().where().eq("email", email).eq("password", password).findUnique();
