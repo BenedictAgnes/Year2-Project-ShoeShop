@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/project2/Year2-Project-ShoeShop/conf/routes
-// @DATE:Sun Mar 03 16:01:58 GMT 2019
+// @SOURCE:/home/wdd/Project/Year2-Project-ShoeShop/conf/routes
+// @DATE:Mon Mar 04 08:36:29 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 

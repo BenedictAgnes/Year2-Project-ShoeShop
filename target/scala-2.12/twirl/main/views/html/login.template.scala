@@ -42,28 +42,22 @@ Seq[Any](format.raw/*3.1*/("""
             """),format.raw/*11.13*/("""</p>
         """)))}),format.raw/*12.10*/("""
 
-        """),_display_(/*14.10*/if(flash.containsKey("error"))/*14.40*/ {_display_(Seq[Any](format.raw/*14.42*/("""
-            """),format.raw/*15.13*/("""<p class="alert alert-warning">
-                """),_display_(/*16.18*/flash/*16.23*/.get("loginRequired")),format.raw/*16.44*/("""
-            """),format.raw/*17.13*/("""</p>
-        """)))}),format.raw/*18.10*/("""
 
+        """),_display_(/*15.10*/helper/*15.16*/.form(action = controllers.routes.LoginController.loginSubmit())/*15.80*/ {_display_(Seq[Any](format.raw/*15.82*/("""
+            """),_display_(/*16.14*/CSRF/*16.18*/.formField),format.raw/*16.28*/("""
 
-        """),_display_(/*21.10*/helper/*21.16*/.form(action = controllers.routes.LoginController.loginSubmit())/*21.80*/ {_display_(Seq[Any](format.raw/*21.82*/("""
-            """),_display_(/*22.14*/CSRF/*22.18*/.formField),format.raw/*22.28*/("""
-
-            """),format.raw/*24.13*/("""<div class="form-group">
-                """),_display_(/*25.18*/inputText(loginForm("email"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Email")),format.raw/*26.76*/("""
-            """),format.raw/*27.13*/("""</div>
+            """),format.raw/*18.13*/("""<div class="form-group">
+                """),_display_(/*19.18*/inputText(loginForm("email"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Email")),format.raw/*20.76*/("""
+            """),format.raw/*21.13*/("""</div>
             <div class="form-group">
-                """),_display_(/*29.18*/inputPassword(loginForm("password"), '_label -> "", 
-                'class -> "form-control input-xs", 'placeholder -> "Password")),format.raw/*30.79*/("""
-            """),format.raw/*31.13*/("""</div>
+                """),_display_(/*23.18*/inputPassword(loginForm("password"), '_label -> "", 
+                'class -> "form-control input-xs", 'placeholder -> "Password")),format.raw/*24.79*/("""
+            """),format.raw/*25.13*/("""</div>
             <div class="form-group">
                 <input type="submit" value="Sign In" class="btn btn-primary">
             </div>
-        """)))}),format.raw/*35.10*/("""
+        """)))}),format.raw/*29.10*/("""
 
 """)))}))
       }
@@ -81,11 +75,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 03 16:01:57 GMT 2019
-                  SOURCE: /home/wdd/project2/Year2-Project-ShoeShop/app/views/login.scala.html
-                  HASH: 5006ba99af1c58017c90faaa0386bc15ea0f10e3
-                  MATRIX: 966->1|1076->40|1120->56|1147->58|1168->71|1207->73|1242->82|1294->108|1331->137|1370->139|1410->152|1485->201|1532->233|1571->235|1619->257|1628->258|1656->266|1710->289|1751->302|1796->316|1834->327|1873->357|1913->359|1954->372|2030->421|2044->426|2086->447|2127->460|2172->474|2211->486|2226->492|2299->556|2339->558|2380->572|2393->576|2424->586|2466->600|2535->642|2677->763|2718->776|2806->837|2958->968|2999->981|3180->1131
-                  LINES: 28->1|31->2|34->3|35->4|35->4|35->4|36->5|37->6|37->6|37->6|38->7|39->8|39->8|39->8|40->9|40->9|40->9|41->10|42->11|43->12|45->14|45->14|45->14|46->15|47->16|47->16|47->16|48->17|49->18|52->21|52->21|52->21|52->21|53->22|53->22|53->22|55->24|56->25|57->26|58->27|60->29|61->30|62->31|66->35
+                  DATE: Mon Mar 04 08:47:10 GMT 2019
+                  SOURCE: /home/wdd/Project/Year2-Project-ShoeShop/app/views/login.scala.html
+                  HASH: 2554bbebd69ea00996c3fe41a56e89f531725c6e
+                  MATRIX: 966->1|1076->40|1120->56|1147->58|1168->71|1207->73|1242->82|1294->108|1331->137|1370->139|1410->152|1485->201|1532->233|1571->235|1619->257|1628->258|1656->266|1710->289|1751->302|1796->316|1835->328|1850->334|1923->398|1963->400|2004->414|2017->418|2048->428|2090->442|2159->484|2301->605|2342->618|2430->679|2582->810|2623->823|2804->973
+                  LINES: 28->1|31->2|34->3|35->4|35->4|35->4|36->5|37->6|37->6|37->6|38->7|39->8|39->8|39->8|40->9|40->9|40->9|41->10|42->11|43->12|46->15|46->15|46->15|46->15|47->16|47->16|47->16|49->18|50->19|51->20|52->21|54->23|55->24|56->25|60->29
                   -- GENERATED --
               */
           
