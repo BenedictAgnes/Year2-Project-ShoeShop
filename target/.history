@@ -33,3 +33,4 @@ compile
 run
 h2-browser
 run
+exit
