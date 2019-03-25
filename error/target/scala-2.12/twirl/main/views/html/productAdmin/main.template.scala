@@ -21,62 +21,63 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
-/*1.2*/import models.users.User
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,User,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(title: String, user: User )(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String, user: models.users.User )(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.45*/("""
+Seq[Any](format.raw/*1.58*/("""
 
-"""),format.raw/*4.1*/("""<!DOCTYPE html>
+"""),format.raw/*3.1*/("""<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Online Shop - """),_display_(/*10.27*/title),format.raw/*10.32*/("""</title>
+    <title>Online Shop - """),_display_(/*9.27*/title),format.raw/*9.32*/("""</title>
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href=""""),_display_(/*14.18*/routes/*14.24*/.Assets.versioned("stylesheets/main.css")),format.raw/*14.65*/("""" rel="stylesheet" />
+    <link href=""""),_display_(/*13.18*/routes/*13.24*/.Assets.versioned("stylesheets/main.css")),format.raw/*13.65*/("""" rel="stylesheet" />
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Online Shop</a>
+                <a class="navbar-brand" href=""""),_display_(/*21.48*/routes/*21.54*/.ProductCtrl.home()),format.raw/*21.73*/("""">Home</a>
             </div>
+
 
             <ul class="nav navbar-nav">
 
-                <li """),_display_(/*27.22*/if(title =="Products" )/*27.45*/{_display_(Seq[Any](format.raw/*27.46*/("""class="active"""")))}),format.raw/*27.61*/(""">
-                    <a href=""""),_display_(/*28.31*/routes/*28.37*/.AdminProductCtrl.listProducts(0)),format.raw/*28.70*/("""">Products</a>
+                <li """),_display_(/*27.22*/if(title=="Products" )/*27.44*/{_display_(Seq[Any](format.raw/*27.45*/("""class="active"""")))}),format.raw/*27.60*/(""">
+                    <a href=""""),_display_(/*28.31*/routes/*28.37*/.ProductCtrl.listProducts(0)),format.raw/*28.65*/("""">Products</a>
                 </li>
+
                 <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
+                    <a href="/">Services</a>
                 </li>
 
                 <li>
                     <a href="#">Contact</a>
                 </li>
-                <li """),_display_(/*40.22*/if(title=="Login")/*40.40*/{_display_(Seq[Any](format.raw/*40.41*/("""class="active"""")))}),format.raw/*40.56*/(""">
-                    """),_display_(/*41.22*/if(user != null)/*41.38*/ {_display_(Seq[Any](format.raw/*41.40*/("""
-                        """),format.raw/*42.25*/("""<a href=""""),_display_(/*42.35*/controllers/*42.46*/.security.routes.LoginCtrl.logout()),format.raw/*42.81*/("""">Logout """),_display_(/*42.91*/user/*42.95*/.getName()),format.raw/*42.105*/("""</a>
-                    """)))}/*43.23*/else/*43.28*/{_display_(Seq[Any](format.raw/*43.29*/("""
-                        """),format.raw/*44.25*/("""<a href=""""),_display_(/*44.35*/controllers/*44.46*/.security.routes.LoginCtrl.login()),format.raw/*44.80*/("""">Login</a>
-                    """)))}),format.raw/*45.22*/("""
+                <li """),_display_(/*38.22*/if(title=="Login")/*38.40*/{_display_(Seq[Any](format.raw/*38.41*/("""class="active"""")))}),format.raw/*38.56*/(""">
+                    """),_display_(/*39.22*/if(user != null)/*39.38*/ {_display_(Seq[Any](format.raw/*39.40*/("""
+                        """),format.raw/*40.25*/("""<a href=""""),_display_(/*40.35*/controllers/*40.46*/.security.routes.LoginCtrl.logout()),format.raw/*40.81*/("""">Logout """),_display_(/*40.91*/user/*40.95*/.getName()),format.raw/*40.105*/("""</a>
+                    """)))}/*41.23*/else/*41.28*/{_display_(Seq[Any](format.raw/*41.29*/("""
+                        """),format.raw/*42.25*/("""<a href=""""),_display_(/*42.35*/controllers/*42.46*/.security.routes.LoginCtrl.login()),format.raw/*42.80*/("""">Login</a>
+                    """)))}),format.raw/*43.22*/("""
 
-                """),format.raw/*47.17*/("""</li>
+                """),format.raw/*45.17*/("""</li>
+                <li>
+                    <a href=""""),_display_(/*47.31*/routes/*47.37*/.ShoppingCtrl.viewOrders),format.raw/*47.61*/("""">View Orders</a>
+                </li>
             </ul>
 
         </div>
@@ -86,8 +87,8 @@ Seq[Any](format.raw/*2.45*/("""
     <container>
         <row>
             <div class="col-md-12">
-                """),_display_(/*57.18*/content),format.raw/*57.25*/("""
-            """),format.raw/*58.13*/("""</div>
+                """),_display_(/*58.18*/content),format.raw/*58.25*/("""
+            """),format.raw/*59.13*/("""</div>
         </row>
     </container>
 <br>
@@ -96,23 +97,22 @@ Seq[Any](format.raw/*2.45*/("""
         <row>
             <div class="col-md-12">
                 Copyright
-                <strong>Online Shop</strong>
+                <strong>Online Shoe Shop</strong>
             </div>
         </row>
     </footer>
     </container>
-    <script src=""""),_display_(/*72.19*/routes/*72.25*/.Assets.versioned("javascripts/main.js")),format.raw/*72.65*/(""""></script>
+    <script src=""""),_display_(/*73.19*/routes/*73.25*/.Assets.versioned("javascripts/main.js")),format.raw/*73.65*/(""""></script>
 </body>
 
-</html>
-"""))
+</html>"""))
       }
     }
   }
 
-  def render(title:String,user:User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,user)(content)
+  def render(title:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,user)(content)
 
-  def f:((String,User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,user) => (content) => apply(title,user)(content)
+  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,user) => (content) => apply(title,user)(content)
 
   def ref: this.type = this
 
@@ -121,11 +121,11 @@ Seq[Any](format.raw/*2.45*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 25 15:07:07 GMT 2019
+                  DATE: Mon Mar 25 16:08:24 GMT 2019
                   SOURCE: /home/wdd/proj/Year2-Project-ShoeShop/error/app/views/productAdmin/main.scala.html
-                  HASH: d203a15449a27501e24933815ff2406bc98790e0
-                  MATRIX: 664->1|1002->27|1140->70|1168->72|1290->167|1316->172|1528->357|1543->363|1605->404|1936->708|1968->731|2007->732|2053->747|2112->779|2127->785|2181->818|2527->1137|2554->1155|2593->1156|2639->1171|2689->1194|2714->1210|2754->1212|2807->1237|2844->1247|2864->1258|2920->1293|2957->1303|2970->1307|3002->1317|3047->1344|3060->1349|3099->1350|3152->1375|3189->1385|3209->1396|3264->1430|3328->1463|3374->1481|3537->1617|3565->1624|3606->1637|3914->1918|3929->1924|3990->1964
-                  LINES: 24->1|29->2|34->2|36->4|42->10|42->10|46->14|46->14|46->14|59->27|59->27|59->27|59->27|60->28|60->28|60->28|72->40|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|74->42|74->42|74->42|74->42|75->43|75->43|75->43|76->44|76->44|76->44|76->44|77->45|79->47|89->57|89->57|90->58|104->72|104->72|104->72
+                  HASH: 9a9fd4857b98f2446d4597b89a7a7e341c2584b1
+                  MATRIX: 983->1|1134->57|1162->59|1283->154|1308->159|1520->344|1535->350|1597->391|1828->595|1843->601|1883->620|2004->714|2035->736|2074->737|2120->752|2179->784|2194->790|2243->818|2505->1053|2532->1071|2571->1072|2617->1087|2667->1110|2692->1126|2732->1128|2785->1153|2822->1163|2842->1174|2898->1209|2935->1219|2948->1223|2980->1233|3025->1260|3038->1265|3077->1266|3130->1291|3167->1301|3187->1312|3242->1346|3306->1379|3352->1397|3436->1454|3451->1460|3496->1484|3693->1654|3721->1661|3762->1674|4075->1960|4090->1966|4151->2006
+                  LINES: 28->1|33->1|35->3|41->9|41->9|45->13|45->13|45->13|53->21|53->21|53->21|59->27|59->27|59->27|59->27|60->28|60->28|60->28|70->38|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|72->40|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|74->42|75->43|77->45|79->47|79->47|79->47|90->58|90->58|91->59|105->73|105->73|105->73
                   -- GENERATED --
               */
           

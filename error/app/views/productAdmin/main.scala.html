@@ -1,5 +1,4 @@
-@import models.users.User
-@(title: String, user: User )(content: Html)
+@(title: String, user: models.users.User )(content: Html)
 
 <!DOCTYPE html>
 
@@ -16,22 +15,21 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Online Shop</a>
+                <a class="navbar-brand" href="@routes.ProductCtrl.home()">Home</a>
             </div>
+
 
             <ul class="nav navbar-nav">
 
-                <li @if(title =="Products" ){class="active"}>
-                    <a href="@routes.AdminProductCtrl.listProducts(0)">Products</a>
+                <li @if(title=="Products" ){class="active"}>
+                    <a href="@routes.ProductCtrl.listProducts(0)">Products</a>
                 </li>
+
                 <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
+                    <a href="/">Services</a>
                 </li>
 
                 <li>
@@ -44,6 +42,9 @@
                         <a href="@controllers.security.routes.LoginCtrl.login()">Login</a>
                     }
 
+                </li>
+                <li>
+                    <a href="@routes.ShoppingCtrl.viewOrders">View Orders</a>
                 </li>
             </ul>
 
@@ -64,7 +65,7 @@
         <row>
             <div class="col-md-12">
                 Copyright
-                <strong>Online Shop</strong>
+                <strong>Online Shoe Shop</strong>
             </div>
         </row>
     </footer>
