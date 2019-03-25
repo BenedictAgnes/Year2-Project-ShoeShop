@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/p/Year2-Project-ShoeShop/ShoeShop/conf/routes
-// @DATE:Sun Mar 24 14:17:09 GMT 2019
+// @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
+// @DATE:Mon Mar 25 15:20:32 GMT 2019
 
 package router
 
@@ -53,7 +53,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.ProductCtrl.index()"""),
-    ("""GET""", this.prefix, """controllers.ProductCtrl.home()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """home""", """controllers.ProductCtrl.home()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """listProducts""", """controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter:String ?= "")"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """productDetails/""" + "$" + """id<[^/]+>""", """controllers.ProductCtrl.productDetails(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.security.LoginCtrl.login()"""),
@@ -103,7 +103,7 @@ class Routes(
 
   // @LINE:5
   private[this] lazy val controllers_ProductCtrl_home1_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("home")))
   )
   private[this] lazy val controllers_ProductCtrl_home1_invoker = createInvoker(
     ProductCtrl_0.home(),
@@ -113,7 +113,7 @@ class Routes(
       "home",
       Nil,
       "GET",
-      this.prefix + """""",
+      this.prefix + """home""",
       """""",
       Seq()
     )

@@ -2,7 +2,7 @@
 
 # An example controller showing a sample home page
 GET		/   						        controllers.ProductCtrl.index()
-GET     /                                   controllers.ProductCtrl.home()
+GET     /home                               controllers.ProductCtrl.home()
 #Products
 
 GET     /listProducts                       controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter?="")

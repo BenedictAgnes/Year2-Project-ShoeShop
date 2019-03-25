@@ -22,20 +22,18 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
+object home extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String, user: models.users.User )(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.58*/("""
-  
-"""),_display_(/*3.2*/main("Home",user)/*3.19*/ {_display_(Seq[Any](format.raw/*3.21*/("""
-	"""),format.raw/*4.2*/("""<title>Soles</title>
-    </head>
-    <body>
+Seq[Any](format.raw/*1.27*/("""
+"""),_display_(/*2.2*/main("Home",user)/*2.19*/ {_display_(Seq[Any](format.raw/*2.21*/("""
+	
+    """),format.raw/*4.5*/("""<body>
 		
 
 	<div class="container-fluid">
@@ -83,7 +81,7 @@ Seq[Any](format.raw/*1.58*/("""
 	    </div>
 	</div>
     </body>
-   """)))}),format.raw/*54.5*/("""
+   """)))}),format.raw/*52.5*/("""
 
 
 """))
@@ -91,9 +89,9 @@ Seq[Any](format.raw/*1.58*/("""
     }
   }
 
-  def render(title:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,user)(content)
+  def render(user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,user) => (content) => apply(title,user)(content)
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -102,11 +100,11 @@ Seq[Any](format.raw/*1.58*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 22 23:25:56 GMT 2019
-                  SOURCE: /home/wdd/p/Year2-Project-ShoeShop/ShoeShop/app/views/home.scala.html
-                  HASH: a866c21c170f6101b76fa611a031daf2928cee70
-                  MATRIX: 970->1|1121->57|1153->64|1178->81|1217->83|1246->86|2196->1006
-                  LINES: 28->1|33->1|35->3|35->3|35->3|36->4|86->54
+                  DATE: Mon Mar 25 15:50:24 GMT 2019
+                  SOURCE: /home/wdd/proj/Year2-Project-ShoeShop/error/app/views/home.scala.html
+                  HASH: 249d11742808d7d50b73b9cf599e47c83cd627b4
+                  MATRIX: 958->1|1078->26|1106->29|1131->46|1170->48|1205->57|2116->938
+                  LINES: 28->1|33->1|34->2|34->2|34->2|36->4|84->52
                   -- GENERATED --
               */
           
