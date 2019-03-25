@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/proj/Year2-Project-ShoeShop/error/app/controllers/ProductCtrl.java:50:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   method getUserById(java.lang.String)[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.users.User[0m
-[0m[[0m[31merror[0m] [0m[0m        return ok(home.render(User.getUserById(session().get("email"))));[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/wdd/proj/Year2-Project-ShoeShop/error/app/views/login.scala.html:12:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message;[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

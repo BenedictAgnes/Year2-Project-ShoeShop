@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Mon Mar 25 15:20:32 GMT 2019
+// @DATE:Mon Mar 25 22:09:01 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -193,6 +193,24 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:42
+    def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.at",
+      """
+        function(path0,file1) {
+        
+          if (path0 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("/public/javascripts") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "javascripts/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+          }
+        
+          if (path0 == """ + implicitly[play.api.mvc.JavascriptLiteral[String]].to("/public/images") + """) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "images/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("file", file1)})
+          }
+        
+        }
+      """
+    )
   
     // @LINE:41
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(

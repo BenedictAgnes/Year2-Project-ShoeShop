@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Mon Mar 25 15:20:32 GMT 2019
+// @DATE:Mon Mar 25 22:09:01 GMT 2019
 
 import play.api.mvc.Call
 
@@ -134,6 +134,25 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:42
+    def at(path:String, file:String): Call = {
+    
+      (path: @unchecked, file: @unchecked) match {
+      
+        // @LINE:42
+        case (path, file) if path == "/public/javascripts" =>
+          implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public/javascripts"))); _rrc
+          Call("GET", _prefix + { _defaultPrefix } + "javascripts/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
+      
+        // @LINE:43
+        case (path, file) if path == "/public/images" =>
+          implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public/images"))); _rrc
+          Call("GET", _prefix + { _defaultPrefix } + "images/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
+      
+      }
+    
+    }
   
     // @LINE:41
     def versioned(file:Asset): Call = {

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Mon Mar 25 15:20:32 GMT 2019
+// @DATE:Mon Mar 25 22:09:01 GMT 2019
 
 package router
 
@@ -76,6 +76,8 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/updateProductSubmit/""" + "$" + """id<[^/]+>""", """controllers.AdminProductCtrl.updateProductSubmit(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/deleteProduct/""" + "$" + """id<[^/]+>""", """controllers.AdminProductCtrl.deleteProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """javascripts/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/javascripts", file:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """images/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/images", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -515,6 +517,42 @@ class Routes(
     )
   )
 
+  // @LINE:42
+  private[this] lazy val controllers_Assets_at24_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("javascripts/"), DynamicPart("file", """.+""",false)))
+  )
+  private[this] lazy val controllers_Assets_at24_invoker = createInvoker(
+    Assets_4.at(fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Assets",
+      "at",
+      Seq(classOf[String], classOf[String]),
+      "GET",
+      this.prefix + """javascripts/""" + "$" + """file<.+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:43
+  private[this] lazy val controllers_Assets_at25_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("images/"), DynamicPart("file", """.+""",false)))
+  )
+  private[this] lazy val controllers_Assets_at25_invoker = createInvoker(
+    Assets_4.at(fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Assets",
+      "at",
+      Seq(classOf[String], classOf[String]),
+      "GET",
+      this.prefix + """images/""" + "$" + """file<.+>""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -660,6 +698,18 @@ class Routes(
     case controllers_Assets_versioned23_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned23_invoker.call(Assets_4.versioned(path, file))
+      }
+  
+    // @LINE:42
+    case controllers_Assets_at24_route(params@_) =>
+      call(Param[String]("path", Right("/public/javascripts")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at24_invoker.call(Assets_4.at(path, file))
+      }
+  
+    // @LINE:43
+    case controllers_Assets_at25_route(params@_) =>
+      call(Param[String]("path", Right("/public/images")), params.fromPath[String]("file", None)) { (path, file) =>
+        controllers_Assets_at25_invoker.call(Assets_4.at(path, file))
       }
   }
 }
