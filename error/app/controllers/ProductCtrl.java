@@ -49,7 +49,9 @@ public class ProductCtrl extends Controller {
     public Result home() {
         return ok(home.render(User.getLoggedIn(session().get("email"))));
     }
-
+    public Result contacts() {
+        return ok(contacts.render(User.getLoggedIn(session().get("email"))));
+    }
 
     // Get a list of products
     // If cat parameter is 0 then return all products

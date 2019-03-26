@@ -4,7 +4,7 @@
 		module="error-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20190325214751"
+		publication="20190326094102"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

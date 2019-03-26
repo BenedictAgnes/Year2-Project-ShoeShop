@@ -60,23 +60,21 @@ Seq[Any](format.raw/*1.58*/("""
                     <a href=""""),_display_(/*28.31*/routes/*28.37*/.ProductCtrl.listProducts(0)),format.raw/*28.65*/("""">Products</a>
                 </li>
 
-                <li>
-                    <a href="/">Services</a>
-                </li>
+              
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href=""""),_display_(/*34.31*/routes/*34.37*/.ProductCtrl.contacts()),format.raw/*34.60*/("""">Contact</a>
                 </li>
-                <li """),_display_(/*38.22*/if(title=="Login")/*38.40*/{_display_(Seq[Any](format.raw/*38.41*/("""class="active"""")))}),format.raw/*38.56*/(""">
-                    """),_display_(/*39.22*/if(user != null)/*39.38*/ {_display_(Seq[Any](format.raw/*39.40*/("""
-                        """),format.raw/*40.25*/("""<a href=""""),_display_(/*40.35*/controllers/*40.46*/.security.routes.LoginCtrl.logout()),format.raw/*40.81*/("""">Logout """),_display_(/*40.91*/user/*40.95*/.getName()),format.raw/*40.105*/("""</a>
-                    """)))}/*41.23*/else/*41.28*/{_display_(Seq[Any](format.raw/*41.29*/("""
-                        """),format.raw/*42.25*/("""<a href=""""),_display_(/*42.35*/controllers/*42.46*/.security.routes.LoginCtrl.login()),format.raw/*42.80*/("""">Login</a>
-                    """)))}),format.raw/*43.22*/("""
+                <li """),_display_(/*36.22*/if(title=="Login")/*36.40*/{_display_(Seq[Any](format.raw/*36.41*/("""class="active"""")))}),format.raw/*36.56*/(""">
+                    """),_display_(/*37.22*/if(user != null)/*37.38*/ {_display_(Seq[Any](format.raw/*37.40*/("""
+                        """),format.raw/*38.25*/("""<a href=""""),_display_(/*38.35*/controllers/*38.46*/.security.routes.LoginCtrl.logout()),format.raw/*38.81*/("""">Logout """),_display_(/*38.91*/user/*38.95*/.getName()),format.raw/*38.105*/("""</a>
+                    """)))}/*39.23*/else/*39.28*/{_display_(Seq[Any](format.raw/*39.29*/("""
+                        """),format.raw/*40.25*/("""<a href=""""),_display_(/*40.35*/controllers/*40.46*/.security.routes.LoginCtrl.login()),format.raw/*40.80*/("""">Login</a>
+                    """)))}),format.raw/*41.22*/("""
 
-                """),format.raw/*45.17*/("""</li>
+                """),format.raw/*43.17*/("""</li>
                 <li>
-                    <a href=""""),_display_(/*47.31*/routes/*47.37*/.ShoppingCtrl.viewOrders),format.raw/*47.61*/("""">View Orders</a>
+                    <a href=""""),_display_(/*45.31*/routes/*45.37*/.ShoppingCtrl.viewOrders),format.raw/*45.61*/("""">View Orders</a>
                 </li>
             </ul>
 
@@ -87,8 +85,8 @@ Seq[Any](format.raw/*1.58*/("""
     <container>
         <row>
             <div class="col-md-12">
-                """),_display_(/*58.18*/content),format.raw/*58.25*/("""
-            """),format.raw/*59.13*/("""</div>
+                """),_display_(/*56.18*/content),format.raw/*56.25*/("""
+            """),format.raw/*57.13*/("""</div>
         </row>
     </container>
 <br>
@@ -102,7 +100,7 @@ Seq[Any](format.raw/*1.58*/("""
         </row>
     </footer>
     </container>
-    <script src=""""),_display_(/*73.19*/routes/*73.25*/.Assets.versioned("javascripts/main.js")),format.raw/*73.65*/(""""></script>
+    <script src=""""),_display_(/*71.19*/routes/*71.25*/.Assets.versioned("javascripts/main.js")),format.raw/*71.65*/(""""></script>
 </body>
 
 </html>"""))
@@ -121,11 +119,11 @@ Seq[Any](format.raw/*1.58*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 25 15:23:32 GMT 2019
-                  SOURCE: /home/wdd/proj/Year2-Project-ShoeShop/error/app/views/main.scala.html
-                  HASH: 9a9fd4857b98f2446d4597b89a7a7e341c2584b1
-                  MATRIX: 970->1|1121->57|1149->59|1270->154|1295->159|1507->344|1522->350|1584->391|1815->595|1830->601|1870->620|1991->714|2022->736|2061->737|2107->752|2166->784|2181->790|2230->818|2492->1053|2519->1071|2558->1072|2604->1087|2654->1110|2679->1126|2719->1128|2772->1153|2809->1163|2829->1174|2885->1209|2922->1219|2935->1223|2967->1233|3012->1260|3025->1265|3064->1266|3117->1291|3154->1301|3174->1312|3229->1346|3293->1379|3339->1397|3423->1454|3438->1460|3483->1484|3680->1654|3708->1661|3749->1674|4062->1960|4077->1966|4138->2006
-                  LINES: 28->1|33->1|35->3|41->9|41->9|45->13|45->13|45->13|53->21|53->21|53->21|59->27|59->27|59->27|59->27|60->28|60->28|60->28|70->38|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|72->40|72->40|72->40|72->40|73->41|73->41|73->41|74->42|74->42|74->42|74->42|75->43|77->45|79->47|79->47|79->47|90->58|90->58|91->59|105->73|105->73|105->73
+                  DATE: Tue Mar 26 10:45:02 GMT 2019
+                  SOURCE: /home/wdd/1/Year2-Project-ShoeShop/error/app/views/main.scala.html
+                  HASH: 5b99bb5262de496981a624fa83a2edd11fde94d3
+                  MATRIX: 970->1|1121->57|1149->59|1270->154|1295->159|1507->344|1522->350|1584->391|1815->595|1830->601|1870->620|1991->714|2022->736|2061->737|2107->752|2166->784|2181->790|2230->818|2362->923|2377->929|2421->952|2505->1009|2532->1027|2571->1028|2617->1043|2667->1066|2692->1082|2732->1084|2785->1109|2822->1119|2842->1130|2898->1165|2935->1175|2948->1179|2980->1189|3025->1216|3038->1221|3077->1222|3130->1247|3167->1257|3187->1268|3242->1302|3306->1335|3352->1353|3436->1410|3451->1416|3496->1440|3693->1610|3721->1617|3762->1630|4075->1916|4090->1922|4151->1962
+                  LINES: 28->1|33->1|35->3|41->9|41->9|45->13|45->13|45->13|53->21|53->21|53->21|59->27|59->27|59->27|59->27|60->28|60->28|60->28|66->34|66->34|66->34|68->36|68->36|68->36|68->36|69->37|69->37|69->37|70->38|70->38|70->38|70->38|70->38|70->38|70->38|71->39|71->39|71->39|72->40|72->40|72->40|72->40|73->41|75->43|77->45|77->45|77->45|88->56|88->56|89->57|103->71|103->71|103->71
                   -- GENERATED --
               */
           

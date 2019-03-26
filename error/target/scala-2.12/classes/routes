@@ -3,6 +3,7 @@
 # An example controller showing a sample home page
 GET		/   						        controllers.ProductCtrl.index()
 GET     /home                               controllers.ProductCtrl.home()
+GET     /contacts                           controllers.ProductCtrl.contacts()
 #Products
 
 GET     /listProducts                       controllers.ProductCtrl.listProducts(cat:Long ?= 0, filter?="")

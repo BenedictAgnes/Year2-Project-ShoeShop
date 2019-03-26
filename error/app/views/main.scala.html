@@ -28,12 +28,10 @@
                     <a href="@routes.ProductCtrl.listProducts(0)">Products</a>
                 </li>
 
-                <li>
-                    <a href="/">Services</a>
-                </li>
+              
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="@routes.ProductCtrl.contacts()">Contact</a>
                 </li>
                 <li @if(title=="Login"){class="active"}>
                     @if(user != null) {

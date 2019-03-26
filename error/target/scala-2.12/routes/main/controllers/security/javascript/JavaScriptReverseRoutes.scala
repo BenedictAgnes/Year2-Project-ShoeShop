@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Mon Mar 25 22:09:01 GMT 2019
+// @SOURCE:/home/wdd/1/Year2-Project-ShoeShop/error/conf/routes
+// @DATE:Tue Mar 26 10:23:42 GMT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -9,10 +9,10 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:12
+// @LINE:13
 package controllers.security.javascript {
 
-  // @LINE:12
+  // @LINE:13
   class ReverseLoginCtrl(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -20,7 +20,7 @@ package controllers.security.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def loginSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.security.LoginCtrl.loginSubmit",
       """
@@ -30,7 +30,7 @@ package controllers.security.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:15
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.security.LoginCtrl.logout",
       """
@@ -40,7 +40,7 @@ package controllers.security.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:13
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.security.LoginCtrl.login",
       """

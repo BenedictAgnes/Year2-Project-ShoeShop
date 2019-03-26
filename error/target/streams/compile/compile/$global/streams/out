@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/wdd/proj/Year2-Project-ShoeShop/error/app/views/login.scala.html:12:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
-[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message;[0m
-[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/1/Year2-Project-ShoeShop/error/app/views/contacts.scala.html:10:6: not found: value content[0m
+[0m[[0m[31merror[0m] [0m[0m				@content[0m
+[0m[[0m[31merror[0m] [0m[0m				 ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

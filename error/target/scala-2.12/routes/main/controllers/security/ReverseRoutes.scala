@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/proj/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Mon Mar 25 22:09:01 GMT 2019
+// @SOURCE:/home/wdd/1/Year2-Project-ShoeShop/error/conf/routes
+// @DATE:Tue Mar 26 10:23:42 GMT 2019
 
 import play.api.mvc.Call
 
@@ -9,29 +9,29 @@ import play.api.mvc.Call
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:12
+// @LINE:13
 package controllers.security {
 
-  // @LINE:12
+  // @LINE:13
   class ReverseLoginCtrl(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def loginSubmit(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "login")
     }
   
-    // @LINE:14
+    // @LINE:15
     def logout(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:12
+    // @LINE:13
     def login(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "login")
