@@ -38,11 +38,11 @@ GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Lo
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
 
-GET     /addCustomer                         controllers.HomeCtrl.addCustomer
-POST    /addCustomerSubmit                   controllers.HomeCtrl.addCustomerSubmit
+GET     /addCustomer                         controllers.security.HomeCtrl.addCustomer
+POST    /addCustomerSubmit                   controllers.security.HomeCtrl.addCustomerSubmit
 
-GET     /registerUser                        controllers.LoginCtrl.registerUser
-POST    /registerUserSubmit                  controllers.LoginCtrl.registerUserSubmit()
+GET     /registerUser                        controllers.security.LoginCtrl.registerUser
+POST    /registerUserSubmit                  controllers.security.LoginCtrl.registerUserSubmit()
 
 GET     /Admin/deleteProduct/:id               controllers.AdminProductCtrl.deleteProduct(id:Long)
 # Map static resources from the /public folder to the /assets URL path

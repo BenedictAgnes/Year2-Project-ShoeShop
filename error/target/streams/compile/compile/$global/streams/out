@@ -1,13 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:41:1: type HomeCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /addCustomer                         controllers.HomeCtrl.addCustomer[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:44:1: type LoginCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /registerUser                        controllers.LoginCtrl.registerUser[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:41:1: type HomeCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /addCustomer                         controllers.HomeCtrl.addCustomer[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:44:1: type LoginCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /registerUser                        controllers.LoginCtrl.registerUser[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:41:1: type HomeCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /addCustomer                         controllers.HomeCtrl.addCustomer[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/conf/routes:44:1: type LoginCtrl is not a member of package controllers[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /registerUser                        controllers.LoginCtrl.registerUser[0m
-[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/views/RegUser.scala.html:18:25: value security is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m    @form(action=routes.security.LoginCtrl.registerUserSubmit(), 'class -> "form-horizontal", 'role -> "form") {[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/views/RegUser.scala.html:39:34: value security is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m                <a href="@routes.security.LoginCtrl.registerUser()">[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

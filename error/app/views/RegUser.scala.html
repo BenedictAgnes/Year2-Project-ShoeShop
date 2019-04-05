@@ -15,7 +15,7 @@
     <!-- Use a views.html.helpers package method to create the form (instead of html)-->
     <!-- Note the arguments that are being passed to the scala function form (they are
          essentially instructions for constructing an HTML form element)-->
-    @form(action=routes.LoginCtrl.registerUserSubmit(), 'class -> "form-horizontal", 'role -> "form") {
+    @form(action=routes.security.LoginCtrl.registerUserSubmit(), 'class -> "form-horizontal", 'role -> "form") {
         @* CSRF attack prevention *@
         @* This token, sent by the controller, will be used to authenticate the form submission *@
         @CSRF.formField
@@ -36,7 +36,7 @@
             -->
             <div class="actions">
                 <input type="submit" value="Register user" class="btn btn-primary">
-                <a href="@routes.LoginCtrl.registerUser()">
+                <a href="@routes.security.LoginCtrl.registerUser()">
                     <button type="button" class="btn btn-warning">Cancel</button>
                 </a>
             </div>

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Fri Apr 05 12:51:03 IST 2019
+// @DATE:Fri Apr 05 13:24:54 IST 2019
 
 package router
 
@@ -24,9 +24,7 @@ class Routes(
   // @LINE:29
   AdminProductCtrl_3: controllers.AdminProductCtrl,
   // @LINE:41
-  HomeCtrl_0: controllers.HomeCtrl,
-  // @LINE:44
-  LoginCtrl_6: controllers.LoginCtrl,
+  HomeCtrl_0: controllers.security.HomeCtrl,
   // @LINE:49
   Assets_5: controllers.Assets,
   val prefix: String
@@ -43,16 +41,14 @@ class Routes(
     // @LINE:29
     AdminProductCtrl_3: controllers.AdminProductCtrl,
     // @LINE:41
-    HomeCtrl_0: controllers.HomeCtrl,
-    // @LINE:44
-    LoginCtrl_6: controllers.LoginCtrl,
+    HomeCtrl_0: controllers.security.HomeCtrl,
     // @LINE:49
     Assets_5: controllers.Assets
-  ) = this(errorHandler, ProductCtrl_1, LoginCtrl_4, ShoppingCtrl_2, AdminProductCtrl_3, HomeCtrl_0, LoginCtrl_6, Assets_5, "/")
+  ) = this(errorHandler, ProductCtrl_1, LoginCtrl_4, ShoppingCtrl_2, AdminProductCtrl_3, HomeCtrl_0, Assets_5, "/")
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, ProductCtrl_1, LoginCtrl_4, ShoppingCtrl_2, AdminProductCtrl_3, HomeCtrl_0, LoginCtrl_6, Assets_5, prefix)
+    new Routes(errorHandler, ProductCtrl_1, LoginCtrl_4, ShoppingCtrl_2, AdminProductCtrl_3, HomeCtrl_0, Assets_5, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -83,10 +79,10 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/addProductSubmit""", """controllers.AdminProductCtrl.addProductSubmit()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/updateProduct/""" + "$" + """id<[^/]+>""", """controllers.AdminProductCtrl.updateProduct(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/updateProductSubmit/""" + "$" + """id<[^/]+>""", """controllers.AdminProductCtrl.updateProductSubmit(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomer""", """controllers.HomeCtrl.addCustomer"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomerSubmit""", """controllers.HomeCtrl.addCustomerSubmit"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registerUser""", """controllers.LoginCtrl.registerUser"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registerUserSubmit""", """controllers.LoginCtrl.registerUserSubmit()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomer""", """controllers.security.HomeCtrl.addCustomer"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomerSubmit""", """controllers.security.HomeCtrl.addCustomerSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registerUser""", """controllers.security.LoginCtrl.registerUser"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """registerUserSubmit""", """controllers.security.LoginCtrl.registerUserSubmit()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """Admin/deleteProduct/""" + "$" + """id<[^/]+>""", """controllers.AdminProductCtrl.deleteProduct(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """javascripts/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public/javascripts", file:String)"""),
@@ -513,14 +509,14 @@ class Routes(
   )
 
   // @LINE:41
-  private[this] lazy val controllers_HomeCtrl_addCustomer23_route = Route("GET",
+  private[this] lazy val controllers_security_HomeCtrl_addCustomer23_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addCustomer")))
   )
-  private[this] lazy val controllers_HomeCtrl_addCustomer23_invoker = createInvoker(
+  private[this] lazy val controllers_security_HomeCtrl_addCustomer23_invoker = createInvoker(
     HomeCtrl_0.addCustomer,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.HomeCtrl",
+      "controllers.security.HomeCtrl",
       "addCustomer",
       Nil,
       "GET",
@@ -531,14 +527,14 @@ class Routes(
   )
 
   // @LINE:42
-  private[this] lazy val controllers_HomeCtrl_addCustomerSubmit24_route = Route("POST",
+  private[this] lazy val controllers_security_HomeCtrl_addCustomerSubmit24_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addCustomerSubmit")))
   )
-  private[this] lazy val controllers_HomeCtrl_addCustomerSubmit24_invoker = createInvoker(
+  private[this] lazy val controllers_security_HomeCtrl_addCustomerSubmit24_invoker = createInvoker(
     HomeCtrl_0.addCustomerSubmit,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.HomeCtrl",
+      "controllers.security.HomeCtrl",
       "addCustomerSubmit",
       Nil,
       "POST",
@@ -549,14 +545,14 @@ class Routes(
   )
 
   // @LINE:44
-  private[this] lazy val controllers_LoginCtrl_registerUser25_route = Route("GET",
+  private[this] lazy val controllers_security_LoginCtrl_registerUser25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registerUser")))
   )
-  private[this] lazy val controllers_LoginCtrl_registerUser25_invoker = createInvoker(
-    LoginCtrl_6.registerUser,
+  private[this] lazy val controllers_security_LoginCtrl_registerUser25_invoker = createInvoker(
+    LoginCtrl_4.registerUser,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LoginCtrl",
+      "controllers.security.LoginCtrl",
       "registerUser",
       Nil,
       "GET",
@@ -567,14 +563,14 @@ class Routes(
   )
 
   // @LINE:45
-  private[this] lazy val controllers_LoginCtrl_registerUserSubmit26_route = Route("POST",
+  private[this] lazy val controllers_security_LoginCtrl_registerUserSubmit26_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("registerUserSubmit")))
   )
-  private[this] lazy val controllers_LoginCtrl_registerUserSubmit26_invoker = createInvoker(
-    LoginCtrl_6.registerUserSubmit(),
+  private[this] lazy val controllers_security_LoginCtrl_registerUserSubmit26_invoker = createInvoker(
+    LoginCtrl_4.registerUserSubmit(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LoginCtrl",
+      "controllers.security.LoginCtrl",
       "registerUserSubmit",
       Nil,
       "POST",
@@ -798,27 +794,27 @@ class Routes(
       }
   
     // @LINE:41
-    case controllers_HomeCtrl_addCustomer23_route(params@_) =>
+    case controllers_security_HomeCtrl_addCustomer23_route(params@_) =>
       call { 
-        controllers_HomeCtrl_addCustomer23_invoker.call(HomeCtrl_0.addCustomer)
+        controllers_security_HomeCtrl_addCustomer23_invoker.call(HomeCtrl_0.addCustomer)
       }
   
     // @LINE:42
-    case controllers_HomeCtrl_addCustomerSubmit24_route(params@_) =>
+    case controllers_security_HomeCtrl_addCustomerSubmit24_route(params@_) =>
       call { 
-        controllers_HomeCtrl_addCustomerSubmit24_invoker.call(HomeCtrl_0.addCustomerSubmit)
+        controllers_security_HomeCtrl_addCustomerSubmit24_invoker.call(HomeCtrl_0.addCustomerSubmit)
       }
   
     // @LINE:44
-    case controllers_LoginCtrl_registerUser25_route(params@_) =>
+    case controllers_security_LoginCtrl_registerUser25_route(params@_) =>
       call { 
-        controllers_LoginCtrl_registerUser25_invoker.call(LoginCtrl_6.registerUser)
+        controllers_security_LoginCtrl_registerUser25_invoker.call(LoginCtrl_4.registerUser)
       }
   
     // @LINE:45
-    case controllers_LoginCtrl_registerUserSubmit26_route(params@_) =>
+    case controllers_security_LoginCtrl_registerUserSubmit26_route(params@_) =>
       call { 
-        controllers_LoginCtrl_registerUserSubmit26_invoker.call(LoginCtrl_6.registerUserSubmit())
+        controllers_security_LoginCtrl_registerUserSubmit26_invoker.call(LoginCtrl_4.registerUserSubmit())
       }
   
     // @LINE:47
