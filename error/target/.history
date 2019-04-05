@@ -9,3 +9,8 @@ exit
 run
 exit
 run
+cd
+cd ..
+stop
+exitr
+exit
