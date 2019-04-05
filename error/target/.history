@@ -1,18 +1,7 @@
+ clean
+compile
 run
-exit
-run
-exit
-run
-exit
-run
-exit
-run
-exit
-run
-cd
-cd ..
-stop
-exitr
-exit
+clean
+compile
 run
 exit

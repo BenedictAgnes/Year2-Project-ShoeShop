@@ -38,8 +38,7 @@ GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Lo
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
 
-GET     /addCustomer                         controllers.security.HomeCtrl.addCustomer
-POST    /addCustomerSubmit                   controllers.security.HomeCtrl.addCustomerSubmit
+
 
 GET     /registerUser                        controllers.security.LoginCtrl.registerUser
 POST    /registerUserSubmit                  controllers.security.LoginCtrl.registerUserSubmit()

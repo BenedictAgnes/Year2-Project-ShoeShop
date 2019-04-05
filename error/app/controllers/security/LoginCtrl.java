@@ -1,5 +1,4 @@
 package controllers.security;
-import security.security;
 import play.api.Environment;
 import play.mvc.*;
 import play.data.*;
@@ -11,6 +10,7 @@ import javax.inject.Inject;
 
 import views.html.*;
 import models.users.*;
+import models.users.UserPassword2;
 
 public class LoginCtrl extends Controller {
     private FormFactory formFactory;
@@ -65,7 +65,7 @@ public class LoginCtrl extends Controller {
 
     public Result registerUser() {
         Form<UserPassword2> regForm = formFactory.form(UserPassword2.class);
-        return ok(registerUser.render(regForm,User.getUserById(session().get("email"))));
+        return ok(registerUser.render(regForm,User.getLoggedIn(session().get("email"))));
     }
     
     public Result registerUserSubmit() {
@@ -75,7 +75,7 @@ public class LoginCtrl extends Controller {
     
         if (newUserForm.hasErrors()) {
     
-            return badRequest(registerUser.render(newUserForm2,User.getUserById(session().get("email"))));
+            return badRequest(registerUser.render(newUserForm2,User.getLoggedIn(session().get("email"))));
         } else {
     
             User  newUser = newUserForm.get();
@@ -84,11 +84,11 @@ public class LoginCtrl extends Controller {
     
             if(!newUser2.getPassword2().equals(newUser2.getPassword())){
                 flash("error", "Passwords must match "); 
-                return redirect(controllers.routes.LoginCtrl.registerUser());
+                return redirect(controllers.security.routes.LoginCtrl.registerUser());
                 
             } 
         
-            if(User.getUserById(newUser.getEmail())==null){
+            if(User.getLoggedIn(newUser.getEmail())==null){
                 newUser.save();
             }else{
                 newUser.update();
@@ -96,7 +96,7 @@ public class LoginCtrl extends Controller {
     
         flash("success", "User " + newUser.getName() + " was registered.");
     
-        return redirect(controllers.routes.LoginCtrl.login()); 
+        return redirect(controllers.security.routes.LoginCtrl.login()); 
         }
     }
 

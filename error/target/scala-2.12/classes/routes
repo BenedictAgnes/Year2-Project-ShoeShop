@@ -37,6 +37,12 @@ POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
 GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
+
+
+
+GET     /registerUser                        controllers.security.LoginCtrl.registerUser
+POST    /registerUserSubmit                  controllers.security.LoginCtrl.registerUserSubmit()
+
 GET     /Admin/deleteProduct/:id               controllers.AdminProductCtrl.deleteProduct(id:Long)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -41,6 +41,9 @@
                     }
 
                 </li>
+                <li @if(title=="Register" ){class="active"}>
+                    <a href="@controllers.security.routes.LoginCtrl.registerUser">Register</a>
+                </li>
                 <li>
                     <a href="@routes.ShoppingCtrl.viewOrders">View Orders</a>
                 </li>

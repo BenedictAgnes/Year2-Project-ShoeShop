@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Fri Apr 05 13:24:54 IST 2019
+// @DATE:Fri Apr 05 17:49:05 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -134,7 +134,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:46
     def deleteProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AdminProductCtrl.deleteProduct",
       """
@@ -186,7 +186,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:49
+  // @LINE:48
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -194,7 +194,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:50
+    // @LINE:49
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -212,7 +212,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:49
+    // @LINE:48
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
