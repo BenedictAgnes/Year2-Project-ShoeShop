@@ -25,7 +25,7 @@ public class LoginCtrl extends Controller {
     public Result login() {
         Form<Login> loginForm = formFactory.form(Login.class);
 
-        return ok(login.render(loginForm, User.getLoggedIn(session().get("email"))));
+        return ok(login.render(loginForm, User.getUserById(session().get("email"))));
     }
 
     public Result loginSubmit() {
@@ -36,7 +36,7 @@ public class LoginCtrl extends Controller {
         // Uses the validate method defined in the Login class
         if (loginForm.hasErrors()) {
             // If errors, show the form again
-            return badRequest(login.render(loginForm, User.getLoggedIn(session().get("email"))));
+            return badRequest(login.render(loginForm, User.getUserById(session().get("email"))));
         } 
         else {
             // User Logged in successfully
@@ -46,7 +46,7 @@ public class LoginCtrl extends Controller {
             session("email", loginForm.get().getEmail());
             
             // Check user type
-            User u = User.getLoggedIn(loginForm.get().getEmail());
+            User u = User.getUserById(loginForm.get().getEmail());
             // If admin - go to admin section
             if (u != null && "admin".equals(u.getRole())) {
                 return redirect(controllers.routes.AdminProductCtrl.index());
@@ -65,7 +65,7 @@ public class LoginCtrl extends Controller {
 
     public Result registerUser() {
         Form<UserPassword2> regForm = formFactory.form(UserPassword2.class);
-        return ok(registerUser.render(regForm,User.getLoggedIn(session().get("email"))));
+        return ok(registerUser.render(regForm,User.getUserById(session().get("email"))));
     }
     
     public Result registerUserSubmit() {
@@ -75,7 +75,7 @@ public class LoginCtrl extends Controller {
     
         if (newUserForm.hasErrors()) {
     
-            return badRequest(registerUser.render(newUserForm2,User.getLoggedIn(session().get("email"))));
+            return badRequest(registerUser.render(newUserForm2,User.getUserById(session().get("email"))));
         } else {
     
             User  newUser = newUserForm.get();
@@ -88,7 +88,7 @@ public class LoginCtrl extends Controller {
                 
             } 
         
-            if(User.getLoggedIn(newUser.getEmail())==null){
+            if(User.getUserById(newUser.getEmail())==null){
                 newUser.save();
             }else{
                 newUser.update();

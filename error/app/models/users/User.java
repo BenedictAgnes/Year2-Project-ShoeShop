@@ -13,9 +13,9 @@ import play.data.validation.*;
 //Map inherited class to a single table
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 //Discriminator column used to define user type
-@DiscriminatorColumn(name="role")
+@DiscriminatorColumn(name="type")
 //The user type is user
-@DiscriminatorValue("user")
+@DiscriminatorValue("u")
 public class User extends Model {
     @Id
     private String email;
@@ -74,21 +74,18 @@ public class User extends Model {
     }
 
     public static Finder<String, User> find = new Finder<String, User>(User.class);
+   
 
-    public static List<User> findAll() {
-        return User.find.all();
-    }
+   
 
     public static User authenticate(String email, String password) {
         return find.query().where().eq("email", email).eq("password", password).findUnique();
     }
-
-    public static User getLoggedIn(String id) {
+    public static User getUserById(String id) {
         if (id == null) {
             return null;
-        }
-        else {
-            return find.byId(id);
+        } else {
+            return find.query().where().eq("email", id).findUnique();
         }
     }
 

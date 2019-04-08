@@ -1,29 +1,18 @@
-2019-04-05 17:50:14,891 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2019-04-05 17:50:15,363 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2019-04-05 17:50:17,222 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-4 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2019-04-05 17:50:17,611 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-04-08 13:28:25,495 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2019-04-08 13:28:25,842 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:h2:file:./data/productsDB
+2019-04-08 13:28:27,187 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-3 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2019-04-08 13:28:27,475 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2019-04-05 17:50:17,619 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev)
-2019-04-05 17:56:16,031 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
-2019-04-05 17:56:16,353 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-16 - Creating Pool for datasource 'default'
-2019-04-05 17:56:16,413 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-16 - Database [default] connected at jdbc:h2:file:./data/productsDB
-2019-04-05 17:56:16,732 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-16 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2019-04-05 17:56:16,829 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-16 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-04-08 13:28:27,486 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev)
+2019-04-08 13:28:28,353 [ERROR] from application in application-akka.actor.default-dispatcher-7 - 
 
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2019-04-05 17:56:16,831 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-16 - Application started (Dev)
-2019-04-05 17:56:35,318 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
-
-! @7be1g0pmj - Internal server error, for (POST) [/registerUserSubmit] ->
+! @7bem212dp - Internal server error, for (GET) [/listProducts] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Error[Duplicate column name "ROLE"; SQL statement: insert into user (email, role, role, name, password) values (?,?,?,?,?) [42121-193]]]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Inheritance type for discriminator value [user] was not found?]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
 	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:310)
@@ -42,27 +31,36 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[Persisten
 	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: javax.persistence.PersistenceException: Error[Duplicate column name "ROLE"; SQL statement: insert into user (email, role, role, name, password) values (?,?,?,?,?) [42121-193]]
-	at io.ebean.config.dbplatform.SqlCodeTranslator.translate(SqlCodeTranslator.java:48)
-	at io.ebean.config.dbplatform.DatabasePlatform.translate(DatabasePlatform.java:195)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:83)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:49)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeInsert(PersistRequestBean.java:1085)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:661)
-	at io.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:707)
-	at io.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:456)
-	at io.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:406)
-	at io.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:393)
-	at io.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1578)
-	at io.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1570)
-	at io.ebean.Model.save(Model.java:190)
-	at controllers.security.LoginCtrl.registerUserSubmit(LoginCtrl.java:92)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$50(Routes.scala:763)
+Caused by: javax.persistence.PersistenceException: Inheritance type for discriminator value [user] was not found?
+	at io.ebeaninternal.server.deploy.InheritInfo.readType(InheritInfo.java:228)
+	at io.ebeaninternal.server.deploy.InheritInfo.readType(InheritInfo.java:214)
+	at io.ebeaninternal.server.query.SqlTreeNodeBean.load(SqlTreeNodeBean.java:232)
+	at io.ebeaninternal.server.query.CQuery.readNextBean(CQuery.java:444)
+	at io.ebeaninternal.server.query.CQuery.hasNext(CQuery.java:529)
+	at io.ebeaninternal.server.query.CQuery.readBean(CQuery.java:507)
+	at io.ebeaninternal.server.query.CQueryEngine.find(CQueryEngine.java:405)
+	at io.ebeaninternal.server.query.DefaultOrmQueryEngine.findId(DefaultOrmQueryEngine.java:162)
+	at io.ebeaninternal.server.core.OrmQueryRequest.findId(OrmQueryRequest.java:327)
+	at io.ebeaninternal.server.core.DefaultServer.findId(DefaultServer.java:1175)
+	at io.ebeaninternal.server.core.DefaultServer.findOne(DefaultServer.java:1200)
+	at io.ebeaninternal.server.core.DefaultServer.findUnique(DefaultServer.java:1184)
+	at io.ebeaninternal.server.querydefn.DefaultOrmQuery.findOne(DefaultOrmQuery.java:1260)
+	at io.ebeaninternal.server.querydefn.DefaultOrmQuery.findUnique(DefaultOrmQuery.java:1270)
+	at io.ebeaninternal.server.expression.DefaultExpressionList.findUnique(DefaultExpressionList.java:412)
+	at models.users.User.getUserById(User.java:88)
+	at controllers.ProductCtrl.getCurrentUser(ProductCtrl.java:42)
+	at controllers.ProductCtrl.listProducts(ProductCtrl.java:81)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$8(Routes.scala:637)
 	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
 	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
 	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
+	at play.db.ebean.TransactionalAction.lambda$call$6(TransactionalAction.java:18)
+	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:670)
+	at io.ebeaninternal.server.core.DefaultServer.execute(DefaultServer.java:663)
+	at io.ebean.Ebean.execute(Ebean.java:1270)
+	at play.db.ebean.TransactionalAction.call(TransactionalAction.java:18)
 	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:138)
 	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:655)
 	at scala.util.Success.$anonfun$map$1(Try.scala:251)
@@ -87,29 +85,16 @@ Caused by: javax.persistence.PersistenceException: Error[Duplicate column name "
 	at scala.concurrent.Future$.apply(Future.scala:655)
 	at play.core.j.JavaAction.apply(JavaAction.scala:138)
 	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:304)
-	... 13 common frames omitted
-Caused by: org.h2.jdbc.JdbcSQLException: Duplicate column name "ROLE"; SQL statement:
-insert into user (email, role, role, name, password) values (?,?,?,?,?) [42121-193]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	at org.h2.message.DbException.get(DbException.java:179)
-	at org.h2.message.DbException.get(DbException.java:155)
-	at org.h2.command.Parser.parseColumnList(Parser.java:864)
-	at org.h2.command.Parser.parseInsert(Parser.java:1062)
-	at org.h2.command.Parser.parsePrepared(Parser.java:413)
-	at org.h2.command.Parser.parse(Parser.java:317)
-	at org.h2.command.Parser.parse(Parser.java:289)
-	at org.h2.command.Parser.prepareCommand(Parser.java:254)
-	at org.h2.engine.Session.prepareLocal(Session.java:561)
-	at org.h2.engine.Session.prepareCommand(Session.java:502)
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1203)
-	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
-	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:287)
-	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:318)
-	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
-	at io.ebeaninternal.server.persist.dml.InsertHandler.getPstmt(InsertHandler.java:112)
-	at io.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:94)
-	at io.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:67)
-	... 55 common frames omitted
-2019-04-05 17:56:43,373 [INFO] from play.core.server.AkkaHttpServer in pool-8-thread-2 - Stopping server...
-2019-04-05 17:56:43,388 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
+	at scala.util.Try$.apply(Try.scala:209)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:304)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	... 12 common frames omitted
+2019-04-08 13:28:53,434 [INFO] from play.core.server.AkkaHttpServer in pool-5-thread-3 - Stopping server...
+2019-04-08 13:28:53,515 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.

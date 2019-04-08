@@ -45,7 +45,7 @@ public class ShoppingCtrl extends Controller {
     
     // Get a user - if logged in email will be set in the session
 	private Customer getCurrentUser() {
-		return (Customer)User.getLoggedIn(session().get("email"));
+		return (Customer)User.getUserById(session().get("email"));
 	}
 
     @Transactional
@@ -61,7 +61,7 @@ public class ShoppingCtrl extends Controller {
         Product p = Product.find.byId(id);
         
         // Get basket for logged in customer
-        Customer customer = (Customer)User.getLoggedIn(session().get("email"));
+        Customer customer = (Customer)User.getUserById(session().get("email"));
         if(p.decrementStock()){
         // Check if item in basket
         if (customer.getBasket() == null) {

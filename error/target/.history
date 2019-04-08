@@ -5,3 +5,11 @@ clean
 compile
 run
 exit
+h2-browser
+exit
+h2-browser
+run
+compile
+exit
+run
+exit

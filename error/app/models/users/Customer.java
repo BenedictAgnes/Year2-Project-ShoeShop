@@ -10,18 +10,13 @@ import play.data.validation.*;
 import models.shopping.*;
 
 @Entity
-
+@Table(name = "user")
 // This is a user of type Customer
-@DiscriminatorValue("customer")
+@DiscriminatorValue("c")
 
 // Customer inherits from the User class
 public class Customer extends User{
 	
-	private String street1;
-	private String street2;
-    private String town;
-    private String postCode;
-    private String creditCard;
 
     // Customer has one basket.
     // Customer is the owner (foreign key will be added to Basket
@@ -34,56 +29,23 @@ public class Customer extends User{
     // table). All changes to Customer are cascaded
     @OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
     private List<ShopOrder> orders;
+
+    public Customer(){
+
+    }
 	
-	public Customer(String email, String role, String name, String password, String street1, String street2, String town, String postCode, String creditCard)
+	public Customer(String email, String role, String name, String password)
 	{
-		super(email, role, name, password);
-        this.street1 = street1;
-        this.street2 = street2;
-        this.town = town;
-        this.postCode = postCode;
-		this.creditCard = creditCard;
-	}
-
-    public String getStreet1() {
-        return street1;
+        super(email, role, name, password);
+       
+    }
+   
+    public static final Finder<Long, Customer> find = new Finder<>(Customer.class);
+			    
+    public static final List<Customer> findAll() {
+       return Customer.find.all();
     }
 
-    public void setStreet1(String street1) {
-        this.street1 = street1;
-    }
-
-    public String getStreet2() {
-        return street2;
-    }
-
-    public void setStreet2(String street2) {
-        this.street2 = street2;
-    }
-
-    public String getTown() {
-        return town;
-    }
-
-    public void setTown(String town) {
-        this.town = town;
-    }
-
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
-    }
-
-    public String getCreditCard() {
-        return creditCard;
-    }
-
-    public void setCreditCard(String creditCard) {
-        this.creditCard = creditCard;
-    }
     public Basket getBasket() {
         return basket;
     }
@@ -99,5 +61,8 @@ public class Customer extends User{
     public void setOrders(List<ShopOrder> orders) {
         this.orders = orders;
     }
+    
+
+   
 
 }

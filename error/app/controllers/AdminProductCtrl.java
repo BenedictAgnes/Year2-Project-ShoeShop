@@ -49,9 +49,10 @@ public class AdminProductCtrl extends Controller {
         this.e = env;
     }
         // Get a user - if logged in email will be set in the session
+    @Transactional
 	private User getCurrentUser() {
-		User u = User.getLoggedIn(session().get("email"));
-		return u;
+		return (Administrator)User.getUserById(session().get("email"));
+		
 	}
     public Result index() {
         return redirect(controllers.routes.AdminProductCtrl.listProducts(0));

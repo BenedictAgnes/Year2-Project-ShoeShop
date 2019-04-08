@@ -39,7 +39,8 @@ public class ProductCtrl extends Controller {
     // Get a user - if logged in email will be set in the session
     @Transactional
 	public User getCurrentUser() {
-		User u = User.getLoggedIn(session().get("email"));
+		User u = User.getUserById(session().get("email"));
+		
 		return u;
 	}
     public Result index() {
@@ -47,10 +48,10 @@ public class ProductCtrl extends Controller {
     }
 
     public Result home() {
-        return ok(home.render(User.getLoggedIn(session().get("email"))));
+        return ok(home.render(User.getUserById(session().get("email"))));
     }
     public Result contacts() {
-        return ok(contacts.render(User.getLoggedIn(session().get("email"))));
+        return ok(contacts.render(User.getUserById(session().get("email"))));
     }
 
     // Get a list of products
@@ -84,7 +85,7 @@ public class ProductCtrl extends Controller {
 
         p = Product.find.byId(id);
 
-        return ok(productDetails.render(p,User.getLoggedIn(session().get("email")),e));
+        return ok(productDetails.render(p,User.getUserById(session().get("email")),e));
     }
     
 }
