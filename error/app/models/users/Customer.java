@@ -12,7 +12,7 @@ import models.shopping.*;
 @Entity
 @Table(name = "user")
 // This is a user of type Customer
-@DiscriminatorValue("c")
+@DiscriminatorValue("customer")
 
 // Customer inherits from the User class
 public class Customer extends User{
@@ -40,11 +40,7 @@ public class Customer extends User{
        
     }
    
-    public static final Finder<Long, Customer> find = new Finder<>(Customer.class);
-			    
-    public static final List<Customer> findAll() {
-       return Customer.find.all();
-    }
+   
 
     public Basket getBasket() {
         return basket;

@@ -15,7 +15,7 @@ import play.data.validation.*;
 //Discriminator column used to define user type
 @DiscriminatorColumn(name="type")
 //The user type is user
-@DiscriminatorValue("u")
+@DiscriminatorValue("user")
 public class User extends Model {
     @Id
     private String email;
@@ -80,12 +80,18 @@ public class User extends Model {
 
     public static User authenticate(String email, String password) {
         return find.query().where().eq("email", email).eq("password", password).findUnique();
+    
     }
+
+    public static List<User> findAll() {
+        return User.find.all();
+    }
+    
     public static User getUserById(String id) {
         if (id == null) {
             return null;
         } else {
-            return find.query().where().eq("email", id).findUnique();
+             return find.byId(id);
         }
     }
 

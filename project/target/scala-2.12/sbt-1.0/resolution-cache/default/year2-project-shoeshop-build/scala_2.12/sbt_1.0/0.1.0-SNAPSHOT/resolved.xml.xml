@@ -4,7 +4,7 @@
 		module="year2-project-shoeshop-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190325215332"
+		publication="20190409103834"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

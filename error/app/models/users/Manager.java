@@ -10,7 +10,7 @@ import play.data.validation.*;
 @Entity
 // This is a User of type manager
 
-@DiscriminatorValue("m")
+@DiscriminatorValue("manager")
 @Table(name = "user")
 // Manager inherits from the User class
 public class Manager extends User {

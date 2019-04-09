@@ -1,8 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/models/users/Customer.java:45:1: findAll() in models.users.Customer cannot override findAll() in models.users.User[0m
-[0m[[0m[31merror[0m] [0m[0m  overridden method is static,final[0m
-[0m[[0m[31merror[0m] [0m[0m    public static final List<Customer> findAll() {[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/models/users/Administrator.java:28:1: findAll() in models.users.Administrator cannot override findAll() in models.users.User[0m
-[0m[[0m[31merror[0m] [0m[0m  overridden method is static,final[0m
-[0m[[0m[31merror[0m] [0m[0m    public static final List<Administrator> findAll() {[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/controllers/AdminProductCtrl.java: /home/wdd/Year2-Project-ShoeShop/error/app/controllers/AdminProductCtrl.java uses unchecked or unsafe operations.[0m
-[0m[[0m[0minfo[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/controllers/AdminProductCtrl.java: Recompile with -Xlint:unchecked for details.[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/Year2-Project-ShoeShop/error/app/controllers/ShoppingCtrl.java:48:1:  models.users.User cannot be converted to models.users.Customer[0m
+[0m[[0m[31merror[0m] [0m[0m		return User.getUserById(session().get("email"));[0m

@@ -9,7 +9,7 @@ import play.data.validation.*;
 
 @Entity
 // This is a User of type admin
-@DiscriminatorValue("a")
+@DiscriminatorValue("admin")
 @Table(name = "user")
 // Administrator inherits from the User class
 public class Administrator extends User{
@@ -22,11 +22,6 @@ public class Administrator extends User{
 	{
 		super(email, role, name, password);
 	}
-   
-	public static final Finder<Long, Administrator> find = new Finder<>(Administrator.class);
-			    
-    public static final List<Administrator> findAll() {
-       return Administrator.find.all();
-    }
+ 
 	
 } 
