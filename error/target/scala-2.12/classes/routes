@@ -11,7 +11,7 @@ GET     /productDetails/:id                 controllers.ProductCtrl.productDetai
 
 # Login
 GET		/login						        controllers.security.LoginCtrl.login()
-POST	/login						        controllers.security.LoginCtrl.loginSubmit()
+POST	/loginSubmit						controllers.security.LoginCtrl.loginSubmit()
 GET     /logout                             controllers.security.LoginCtrl.logout()
 
 # Shopping
@@ -24,6 +24,9 @@ GET     /placeOrder                         controllers.ShoppingCtrl.placeOrder(
 GET     /cancelOrder                         controllers.ShoppingCtrl.cancelOrder(id: Long)
 GET     /viewOrders                         controllers.ShoppingCtrl.viewOrders()
 
+GET     /users                              controllers.security.LoginCtrl.users
+GET     /addUser                            controllers.security.LoginCtrl.addUser
+POST    /addUserSubmit                      controllers.security.LoginCtrl.addUserSubmit
 
 # Product Administration
 GET		/Admin						        controllers.AdminProductCtrl.index()
@@ -37,6 +40,8 @@ POST	/Admin/addProductSubmit				controllers.AdminProductCtrl.addProductSubmit()
 GET		/Admin/updateProduct/:id			controllers.AdminProductCtrl.updateProduct(id:Long)
 POST	/Admin/updateProductSubmit/:id		controllers.AdminProductCtrl.updateProductSubmit(id:Long)
 
+GET     /deleteUser/:id                     controllers.security.LoginCtrl.deleteUser(id: String)
+GET     /updateUser/:id                     controllers.security.LoginCtrl.updateUser(id: String)
 
 
 

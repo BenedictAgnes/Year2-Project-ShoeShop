@@ -29,7 +29,7 @@ public class ShopOrder extends Model {
     private List<OrderItem> items;
     
     @ManyToOne
-    private Customer customer;
+    private User user;
 
     // Default constructor
     public  ShopOrder() {
@@ -85,12 +85,12 @@ public class ShopOrder extends Model {
         this.items = items;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public User getUser() {
+        return user;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setUser(User user) {
+        this.user = user;
     } 
 
     public void adjustStock(){

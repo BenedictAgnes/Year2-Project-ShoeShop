@@ -19,9 +19,7 @@ import controllers.security.*;
 import java.util.Calendar;
 
 // Authenticate user
-@Security.Authenticated(Secured.class)
-// Authorise user (check if user is a customer)
-@With(CheckIfCustomer.class)
+
 
 public class ShoppingCtrl extends Controller {
 
@@ -44,8 +42,8 @@ public class ShoppingCtrl extends Controller {
 
     
     // Get a user - if logged in email will be set in the session
-	private Customer getCurrentUser() {
-		return (Customer)User.getUserById(session().get("email"));
+	private User getCurrentUser() {
+		return User.getUserById(session().get("email"));
 	}
 
     @Transactional
@@ -61,22 +59,22 @@ public class ShoppingCtrl extends Controller {
         Product p = Product.find.byId(id);
         
         // Get basket for logged in customer
-        Customer customer = (Customer)User.getUserById(session().get("email"));
+        User user = User.getUserById(session().get("email"));
         if(p.decrementStock()){
         // Check if item in basket
-        if (customer.getBasket() == null) {
+        if (user.getBasket() == null) {
             // If no basket, create one
-            customer.setBasket(new Basket());
-            customer.getBasket().setCustomer(customer);
-            customer.update();
+            user.setBasket(new Basket());
+            user.getBasket().setUser(user);
+            user.update();
         }
         p.update();
         // Add product to the basket and save
-        customer.getBasket().addProduct(p);
-        customer.update();
+        user.getBasket().addProduct(p);
+        user.update();
     }
         // Show the basket contents     
-        return ok(basket.render(customer));
+        return ok(basket.render(user));
     }
     
     // Add an item to the basket
@@ -109,7 +107,7 @@ public class ShoppingCtrl extends Controller {
         // Get the order item
         OrderItem item = OrderItem.find.byId(itemId);
         // Get user
-        Customer c = getCurrentUser();
+        User c = getCurrentUser();
         // Call basket remove item method
         c.getBasket().removeItem(item);
         c.getBasket().update();
@@ -121,7 +119,7 @@ public class ShoppingCtrl extends Controller {
     @Transactional
     public Result emptyBasket() {
         
-        Customer c = getCurrentUser();
+        User c = getCurrentUser();
         c.getBasket().removeAllItems();
         c.getBasket().update();
         
@@ -130,13 +128,13 @@ public class ShoppingCtrl extends Controller {
 
     @Transactional
     public Result placeOrder() {
-        Customer c = getCurrentUser();
+        User c = getCurrentUser();
         
         // Create an order instance
         ShopOrder order = new ShopOrder();
         
         // Associate order with customer
-        order.setCustomer(c);
+        order.setUser(c);
         
         // Copy basket to order
         order.setItems(c.getBasket().getBasketItems());

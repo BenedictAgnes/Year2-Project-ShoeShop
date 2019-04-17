@@ -1,4 +1,4 @@
-@(customer: models.users.Customer, order: models.shopping.ShopOrder)
+@(User: models.users.User, order: models.shopping.ShopOrder)
 
 
 @import play.api.Play.current
@@ -6,7 +6,7 @@
 @import models.products._
 
 <!-- Pass page title and user on to main -->
-@main("Order Confirmation", customer) {
+@main("Order Confirmation", User) {
 
 
 <div class="row">

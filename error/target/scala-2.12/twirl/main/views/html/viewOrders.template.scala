@@ -22,10 +22,10 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object viewOrders extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.Customer,play.twirl.api.HtmlFormat.Appendable] {
+object viewOrders extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(customer: models.users.Customer):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(User: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*4.2*/import play.api.Play.current
@@ -33,12 +33,12 @@ object viewOrders extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
 /*6.2*/import models.products._
 
 
-Seq[Any](format.raw/*1.35*/("""
+Seq[Any](format.raw/*1.27*/("""
 
 
 """),format.raw/*7.1*/("""
 """),format.raw/*8.1*/("""<!-- Pass page title and user on to main -->
-"""),_display_(/*9.2*/main("View Orders", customer)/*9.31*/ {_display_(Seq[Any](format.raw/*9.33*/("""
+"""),_display_(/*9.2*/main("View Orders", User)/*9.27*/ {_display_(Seq[Any](format.raw/*9.29*/("""
 
 
 	"""),format.raw/*12.2*/("""<div class="col-md-12">
@@ -51,7 +51,7 @@ Seq[Any](format.raw/*1.35*/("""
 		
                
                     """),format.raw/*21.21*/("""<!-- Start of For loop - For each p in products add a row -->
-                    """),_display_(/*22.22*/for(o <- customer.getOrders()) yield /*22.52*/ {_display_(Seq[Any](format.raw/*22.54*/("""
+                    """),_display_(/*22.22*/for(o <- User.getOrders()) yield /*22.48*/ {_display_(Seq[Any](format.raw/*22.50*/("""
 
                         """),format.raw/*24.25*/("""<p>Order Number: """),_display_(/*24.43*/o/*24.44*/.getId()),format.raw/*24.52*/("""</p>
                         <p>Order Date: """),_display_(/*25.41*/o/*25.42*/.getOrderDateString()),format.raw/*25.63*/("""</p>
@@ -103,9 +103,9 @@ Seq[Any](format.raw/*1.35*/("""
     }
   }
 
-  def render(customer:models.users.Customer): play.twirl.api.HtmlFormat.Appendable = apply(customer)
+  def render(User:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(User)
 
-  def f:((models.users.Customer) => play.twirl.api.HtmlFormat.Appendable) = (customer) => apply(customer)
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (User) => apply(User)
 
   def ref: this.type = this
 
@@ -114,10 +114,10 @@ Seq[Any](format.raw/*1.35*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 05 17:49:07 IST 2019
+                  DATE: Wed Apr 17 14:34:06 IST 2019
                   SOURCE: /home/wdd/Year2-Project-ShoeShop/error/app/views/viewOrders.scala.html
-                  HASH: 2266d965e81501fc1bb99b5b1deb54e56f7618a0
-                  MATRIX: 968->1|1074->38|1110->68|1142->94|1196->34|1225->119|1252->120|1323->166|1360->195|1399->197|1430->201|1483->228|1524->260|1564->262|1597->268|1668->312|1682->317|1718->332|1751->338|1791->348|1861->390|1971->473|2017->503|2057->505|2111->531|2156->549|2166->550|2195->558|2267->603|2277->604|2319->625|2951->1230|2989->1252|3029->1254|3083->1280|3144->1314|3154->1315|3181->1321|3243->1356|3253->1357|3295->1378|3357->1413|3367->1414|3402->1428|3471->1470|3521->1499|3590->1541|3642->1572|3751->1650|3982->1854|4036->1886|4147->1970|4162->1976|4219->2012|4363->2125
+                  HASH: 4eef08058fff6300b16edf8c7c552bf452ff06f3
+                  MATRIX: 964->1|1062->30|1098->60|1130->86|1184->26|1213->111|1240->112|1311->158|1344->183|1383->185|1414->189|1467->216|1508->248|1548->250|1581->256|1652->300|1666->305|1702->320|1735->326|1775->336|1845->378|1955->461|1997->487|2037->489|2091->515|2136->533|2146->534|2175->542|2247->587|2257->588|2299->609|2931->1214|2969->1236|3009->1238|3063->1264|3124->1298|3134->1299|3161->1305|3223->1340|3233->1341|3275->1362|3337->1397|3347->1398|3382->1412|3451->1454|3501->1483|3570->1525|3622->1556|3731->1634|3962->1838|4016->1870|4127->1954|4142->1960|4199->1996|4343->2109
                   LINES: 28->1|31->4|32->5|33->6|36->1|39->7|40->8|41->9|41->9|41->9|44->12|45->13|45->13|45->13|46->14|47->15|47->15|47->15|48->16|49->17|53->21|54->22|54->22|54->22|56->24|56->24|56->24|56->24|57->25|57->25|57->25|71->39|71->39|71->39|73->41|74->42|74->42|74->42|75->43|75->43|75->43|76->44|76->44|76->44|77->45|77->45|78->46|78->46|81->49|87->55|87->55|91->59|91->59|91->59|95->63
                   -- GENERATED --
               */

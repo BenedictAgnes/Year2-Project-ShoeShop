@@ -5,8 +5,8 @@
 
 create table basket (
   id                            bigint auto_increment not null,
-  customer_email                varchar(255),
-  constraint uq_basket_customer_email unique (customer_email),
+  user_email                    varchar(255),
+  constraint uq_basket_user_email unique (user_email),
   constraint pk_basket primary key (id)
 );
 
@@ -44,7 +44,7 @@ create table product (
 create table shop_order (
   id                            bigint auto_increment not null,
   order_date                    timestamp,
-  customer_email                varchar(255),
+  user_email                    varchar(255),
   constraint pk_shop_order primary key (id)
 );
 
@@ -57,7 +57,7 @@ create table user (
   constraint pk_user primary key (email)
 );
 
-alter table basket add constraint fk_basket_customer_email foreign key (customer_email) references user (email) on delete restrict on update restrict;
+alter table basket add constraint fk_basket_user_email foreign key (user_email) references user (email) on delete restrict on update restrict;
 
 alter table category_product add constraint fk_category_product_category foreign key (category_id) references category (id) on delete restrict on update restrict;
 create index ix_category_product_category on category_product (category_id);
@@ -74,13 +74,13 @@ create index ix_order_item_basket_id on order_item (basket_id);
 alter table order_item add constraint fk_order_item_product_id foreign key (product_id) references product (id) on delete restrict on update restrict;
 create index ix_order_item_product_id on order_item (product_id);
 
-alter table shop_order add constraint fk_shop_order_customer_email foreign key (customer_email) references user (email) on delete restrict on update restrict;
-create index ix_shop_order_customer_email on shop_order (customer_email);
+alter table shop_order add constraint fk_shop_order_user_email foreign key (user_email) references user (email) on delete restrict on update restrict;
+create index ix_shop_order_user_email on shop_order (user_email);
 
 
 # --- !Downs
 
-alter table basket drop constraint if exists fk_basket_customer_email;
+alter table basket drop constraint if exists fk_basket_user_email;
 
 alter table category_product drop constraint if exists fk_category_product_category;
 drop index if exists ix_category_product_category;
@@ -97,8 +97,8 @@ drop index if exists ix_order_item_basket_id;
 alter table order_item drop constraint if exists fk_order_item_product_id;
 drop index if exists ix_order_item_product_id;
 
-alter table shop_order drop constraint if exists fk_shop_order_customer_email;
-drop index if exists ix_shop_order_customer_email;
+alter table shop_order drop constraint if exists fk_shop_order_user_email;
+drop index if exists ix_shop_order_user_email;
 
 drop table if exists basket;
 

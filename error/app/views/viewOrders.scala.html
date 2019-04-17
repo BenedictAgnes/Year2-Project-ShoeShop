@@ -1,4 +1,4 @@
-@(customer: models.users.Customer)
+@(User: models.users.User)
 
 
 @import play.api.Play.current
@@ -6,7 +6,7 @@
 @import models.products._
 
 <!-- Pass page title and user on to main -->
-@main("View Orders", customer) {
+@main("View Orders", User) {
 
 
 	<div class="col-md-12">
@@ -19,7 +19,7 @@
 		
                
                     <!-- Start of For loop - For each p in products add a row -->
-                    @for(o <- customer.getOrders()) {
+                    @for(o <- User.getOrders()) {
 
                         <p>Order Number: @o.getId()</p>
                         <p>Order Date: @o.getOrderDateString()</p>

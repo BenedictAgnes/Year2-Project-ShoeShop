@@ -24,9 +24,7 @@ import org.im4java.core.ConvertCmd;
 import org.im4java.core.IMOperation;
 
 // Authenticate user
-@Security.Authenticated(Secured.class)
-// Authorise user (check if admin)
-@With(CheckIfAdmin.class)
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -51,7 +49,7 @@ public class AdminProductCtrl extends Controller {
         // Get a user - if logged in email will be set in the session
     @Transactional
 	private User getCurrentUser() {
-		return (Administrator)User.getUserById(session().get("email"));
+		return User.getUserById(session().get("email"));
 		
 	}
     public Result index() {

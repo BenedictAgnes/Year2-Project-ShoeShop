@@ -22,10 +22,10 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object orderConfirmed extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[models.users.Customer,models.shopping.ShopOrder,play.twirl.api.HtmlFormat.Appendable] {
+object orderConfirmed extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[models.users.User,models.shopping.ShopOrder,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(customer: models.users.Customer, order: models.shopping.ShopOrder):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(User: models.users.User, order: models.shopping.ShopOrder):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*4.2*/import play.api.Play.current
@@ -33,12 +33,12 @@ object orderConfirmed extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl
 /*6.2*/import models.products._
 
 
-Seq[Any](format.raw/*1.69*/("""
+Seq[Any](format.raw/*1.61*/("""
 
 
 """),format.raw/*7.1*/("""
 """),format.raw/*8.1*/("""<!-- Pass page title and user on to main -->
-"""),_display_(/*9.2*/main("Order Confirmation", customer)/*9.38*/ {_display_(Seq[Any](format.raw/*9.40*/("""
+"""),_display_(/*9.2*/main("Order Confirmation", User)/*9.34*/ {_display_(Seq[Any](format.raw/*9.36*/("""
 
 
 """),format.raw/*12.1*/("""<div class="row">
@@ -88,9 +88,9 @@ Seq[Any](format.raw/*1.69*/("""
     }
   }
 
-  def render(customer:models.users.Customer,order:models.shopping.ShopOrder): play.twirl.api.HtmlFormat.Appendable = apply(customer,order)
+  def render(User:models.users.User,order:models.shopping.ShopOrder): play.twirl.api.HtmlFormat.Appendable = apply(User,order)
 
-  def f:((models.users.Customer,models.shopping.ShopOrder) => play.twirl.api.HtmlFormat.Appendable) = (customer,order) => apply(customer,order)
+  def f:((models.users.User,models.shopping.ShopOrder) => play.twirl.api.HtmlFormat.Appendable) = (User,order) => apply(User,order)
 
   def ref: this.type = this
 
@@ -99,10 +99,10 @@ Seq[Any](format.raw/*1.69*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 05 17:49:06 IST 2019
+                  DATE: Wed Apr 17 14:34:06 IST 2019
                   SOURCE: /home/wdd/Year2-Project-ShoeShop/error/app/views/orderConfirmed.scala.html
-                  HASH: 3e5b4bbbc1a792a85e44ef6b31ed3dcf2ec4a6f7
-                  MATRIX: 998->1|1138->72|1174->102|1206->128|1260->68|1289->153|1316->154|1387->200|1431->236|1470->238|1500->241|1573->288|1614->320|1654->322|1687->328|1758->372|1772->377|1808->392|1841->398|1881->408|1913->413|2219->692|2245->709|2285->711|2334->732|2444->815|2484->839|2524->841|2573->862|2634->896|2644->897|2684->916|2746->951|2756->952|2803->978|2872->1020|2920->1047|2982->1082|2992->1083|3027->1097|3096->1139|3148->1170|3232->1223|3303->1263|3334->1267|3510->1416|3568->1452
+                  HASH: d5444b0ada9685968478ace4043eefe97c85b161
+                  MATRIX: 994->1|1126->64|1162->94|1194->120|1248->60|1277->145|1304->146|1375->192|1415->224|1454->226|1484->229|1557->276|1598->308|1638->310|1671->316|1742->360|1756->365|1792->380|1825->386|1865->396|1897->401|2203->680|2229->697|2269->699|2318->720|2428->803|2468->827|2508->829|2557->850|2618->884|2628->885|2668->904|2730->939|2740->940|2787->966|2856->1008|2904->1035|2966->1070|2976->1071|3011->1085|3080->1127|3132->1158|3216->1211|3287->1251|3318->1255|3494->1404|3552->1440
                   LINES: 28->1|31->4|32->5|33->6|36->1|39->7|40->8|41->9|41->9|41->9|44->12|47->15|47->15|47->15|48->16|49->17|49->17|49->17|50->18|51->19|53->21|65->33|65->33|65->33|66->34|67->35|67->35|67->35|68->36|69->37|69->37|69->37|70->38|70->38|70->38|71->39|71->39|72->40|72->40|72->40|73->41|73->41|75->43|76->44|77->45|81->49|81->49
                   -- GENERATED --
               */

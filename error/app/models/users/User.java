@@ -6,6 +6,7 @@ import javax.persistence.*;
 import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
+import models.shopping.*;
 
 @Entity
 //Specified mapped table name
@@ -28,7 +29,15 @@ public class User extends Model {
 
     @Constraints.Required
     private String password;
+   
+    @OneToOne(mappedBy="user", cascade = CascadeType.ALL)
+    private Basket basket;
+    
+    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
+    private List<ShopOrder> orders;
 
+    
+    
     public User() {
     }
         // Constructor to initialise object
@@ -94,7 +103,22 @@ public class User extends Model {
              return find.byId(id);
         }
     }
+    public Basket getBasket() {
+        return basket;
+    }
 
+    public void setBasket(Basket basket) {
+        this.basket = basket;
+    }
+
+    public List<ShopOrder> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<ShopOrder> orders) {
+        this.orders = orders;
+    }
+    
     
 
 }

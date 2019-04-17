@@ -45,7 +45,9 @@
                     <a href="@controllers.security.routes.LoginCtrl.registerUser">Register</a>
                 </li>
                 <li>
+                    @if((user !=null) && ("user".equals(user.getRole()))) {
                     <a href="@routes.ShoppingCtrl.viewOrders">View Orders</a>
+                    }
                 </li>
             </ul>
 

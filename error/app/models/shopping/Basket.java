@@ -22,7 +22,7 @@ public class Basket extends Model {
     private List<OrderItem> basketItems;
     
     @OneToOne
-    private Customer customer;
+    private User user;
 
     // Default constructor
     public  Basket() {
@@ -126,11 +126,11 @@ public class Basket extends Model {
         this.basketItems = basketItems;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public User getUser() {
+        return user;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
