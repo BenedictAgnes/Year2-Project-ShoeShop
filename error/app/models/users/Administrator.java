@@ -22,6 +22,6 @@ public class Administrator extends User{
 	{
 		super(email, role, name, password);
 	}
- 
+
 	
 } 

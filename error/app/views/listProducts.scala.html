@@ -68,6 +68,14 @@
       </tbody>
 
     </table>
+
+    <p>
+        @if((user !=null) && ("admin".equals(user.getRole()))) {
+        <a href="@routes.AdminProductCtrl.addProduct()">
+          <button class="btn btn-primary">Add a product</button>
+        </a>
+      }
+      </p>
   </div>
 </div>
 }

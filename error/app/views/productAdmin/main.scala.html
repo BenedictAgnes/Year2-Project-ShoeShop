@@ -28,12 +28,9 @@
                     <a href="@routes.ProductCtrl.listProducts(0)">Products</a>
                 </li>
 
-                <li>
-                    <a href="/">Services</a>
-                </li>
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="@routes.ProductCtrl.contacts()">Contact</a>
                 </li>
                 <li @if(title=="Login"){class="active"}>
                     @if(user != null) {
@@ -44,7 +41,9 @@
 
                 </li>
                 <li>
+                        @if((user !=null) && ("customer".equals(user.getRole()))) { 
                     <a href="@routes.ShoppingCtrl.viewOrders">View Orders</a>
+                        }
                 </li>
             </ul>
 

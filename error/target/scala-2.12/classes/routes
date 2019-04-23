@@ -11,7 +11,7 @@ GET     /productDetails/:id                 controllers.ProductCtrl.productDetai
 
 # Login
 GET		/login						        controllers.security.LoginCtrl.login()
-POST	/loginSubmit						controllers.security.LoginCtrl.loginSubmit()
+GET	/loginSubmit						controllers.security.LoginCtrl.loginSubmit()
 GET     /logout                             controllers.security.LoginCtrl.logout()
 
 # Shopping

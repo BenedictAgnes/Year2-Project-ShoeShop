@@ -38,19 +38,39 @@ Seq[Any](format.raw/*1.29*/("""
 			<h1>
 				Contact us
 			</h1>
-			<div class="col-sm-4">
-				Our info
-		
-						<p>Our email: solesemail.com</p>
-						<p>Our Phone: 01465465465</p>
-						<p>Facebook: Soles</p>
-						<p>HQ: Address street number</p>
-						
-		</div>
-		
-				<div class="col-sm-8">
-						<img src=""""),_display_(/*20.18*/routes/*20.24*/.Assets.at("/public/images", "phone.png")),format.raw/*20.65*/("""" />
+			<div class="container">
+					<h3 class="text-center">Contact</h3>
+					<p class="text-center"><em>We love our customers!</em></p>
+				
+					<div class="row">
+						<div class="col-md-4">
+							<p>Have a question? Drop a note.</p>
+							<p><span class="glyphicon glyphicon-map-marker"></span>Dublin, Ireland</p>
+							<p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+							<p><span class="glyphicon glyphicon-envelope"></span>Email: mailmail.com</p>
+						</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-sm-6 form-group">
+									<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								</div>
+								<div class="col-sm-6 form-group">
+									<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+								</div>
+							</div>
+							<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+							<br>
+							<div class="row">
+								<div class="col-md-12 form-group">
+									<button class="btn pull-right" type="submit">Send</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				
+		
+			
 	</div>
 	
 
@@ -65,7 +85,7 @@ Seq[Any](format.raw/*1.29*/("""
 			</div>
 		</div>
     </body>
-   """)))}),format.raw/*36.5*/("""
+   """)))}),format.raw/*56.5*/("""
 
 
 """))
@@ -84,11 +104,11 @@ Seq[Any](format.raw/*1.29*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 17 14:34:06 IST 2019
+                  DATE: Tue Apr 23 14:58:54 IST 2019
                   SOURCE: /home/wdd/Year2-Project-ShoeShop/error/app/views/contacts.scala.html
-                  HASH: fead955e699764a35591aa1096233bc1fe4e228a
-                  MATRIX: 962->3|1082->28|1110->31|1135->48|1174->50|1209->59|1560->383|1575->389|1637->430|1870->633
-                  LINES: 28->1|33->1|34->2|34->2|34->2|36->4|52->20|52->20|52->20|68->36
+                  HASH: 0b59c92a2bc33669a5933cf9f02ae65dd06ac59c
+                  MATRIX: 962->3|1082->28|1110->31|1135->48|1174->50|1209->59|2740->1560
+                  LINES: 28->1|33->1|34->2|34->2|34->2|36->4|88->56
                   -- GENERATED --
               */
           

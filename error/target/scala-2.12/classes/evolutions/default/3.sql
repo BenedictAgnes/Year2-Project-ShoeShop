@@ -10,4 +10,4 @@ insert into user (type,email,name,password,role) values ( 'admin','admin@product
 
 insert into user (type,email,name,password,role) values ('manager', 'manager@products.com', 'Bob Manager', 'password', 'manager' );
 
-insert into user (type,email,name,password,role) values ('customer', 'customer@products.com', 'Charlie Customer', 'password', 'customer' );
+insert into user (type,email,name,password,role) values ('user', 'customer@products.com', 'Charlie Customer', 'password', 'customer' );

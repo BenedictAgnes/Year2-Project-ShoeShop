@@ -1,60 +1,74 @@
-  @(user: models.users.User)
+@(user: models.users.User)
 @main("Home",user) {
 	
     <body>
 		
-
-		<div class="container-fluid">
-			<div class="row">
-			<div class="col-sm-3">
-				<div class="well sidecol">
-				<h2>News</h2>
-				<h3>Student Sales</h3>
-				<p>QUICK!!<span class="redtext">10% Student discounts</span> ends soon<span class="redtext">Last Chance to get the shoes you always wanted <img src="@routes.Assets.at("/public/images", "StudentDiscount.jpg")" width="300" height="230" /></span>.
+				<div class="container">
+						  
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+							</ol>
 					
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="midcol">
-				<h1>SOLES</h1>
-				<img src="@routes.Assets.at("/public/images", "vans.gif")" />
-				<img src="@routes.Assets.at("/public/images", "vapour.jfif")" />
-				<img src="@routes.Assets.at("/public/images", "Nike.jpg")" width="250" height="180"/>
-	
-				</div>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="@routes.Assets.at("/public/images", "header1.jpg")" alt="pic1" style="width:100%;">
+								<div class="carousel-caption">
+										<h3>Trending</h3>
+										<p>Trending deals too hard to miss out</p>
+									</div>
+							</div>
+					
+							<div class="item">
+								<img src="@routes.Assets.at("/public/images", "header2.jpg")" alt="pic2" style="width:100%;">
+								<div class="carousel-caption">
+										<h3>HOT</h3>
+										<p>Buy the hottest deals</p>
+									</div>
+							</div>
+							<div class="item">
+									<img src="@routes.Assets.at("/public/images", "header3.jpg")" alt="pic3" style="width:100%;">
+									<div class="carousel-caption">
+											<h3>Comfort</h3>
+											<p>Run is comfort</p>
+										</div>
+								</div>
+							</div>
 				
-			</div>
-			<div class="col-sm-3">
-				<div class="well sidecol">
-				<h2>Events</h2>
-				<h3>Clearance Sale</h3>
-				<p>Last Seasons shoes <span class="redtext">50%</span>Act now and get a 3rd pair for half price</p>
-				</div>
-			</div>
-			</div>
-			<div class= "row">
-				<div class = "col-sm-12">
-					<div class="pop">
-				<h2>Most Wanted Shoes-Buy Now!</h2>
-				<img src="@routes.Assets.at("/public/images", "trainer1.jfif")" width="250" height="180"/>
-				<img src="@routes.Assets.at("/public/images", "trainer2.jfif")" width="250" height="180"/>
-				<img src="@routes.Assets.at("/public/images", "trainer3.jfif")" width="250" height="180"/>
-				<img src="@routes.Assets.at("/public/images", "trainer4.jfif")" width="250" height="180"/>
-			</div>
-	
-	
-				</div>
-			</div>
-	
-			<div class="row">
-			<div class="col-sm-12">
-				<div class="well footer">
-				Year 2 Project 
-				</div>
-			</div>
-			</div>
-		</div>
+					
+						<!-- Left and right controls -->
+						
+						</div>
+					</div>
+					<div class="container">    
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="panel panel-primary">
+										<div class="panel-heading">Most Popular</div>
+										<div class="panel-body"><a href="http://localhost:9000/productDetails/14"><img src="@routes.Assets.at("/public/images", "trainer1.jfif")" class="img-responsive" style="width:100%" alt="Image"></div> </a>
+										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+									</div>
+								</div>
+								<div class="col-sm-4"> 
+									<div class="panel panel-danger">
+										<div class="panel-heading">New In</div>
+										<div class="panel-body"><img src="@routes.Assets.at("/public/images", "trainer2.jfif")" class="img-responsive" style="width:100%" alt="Image"></div>
+										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+									</div>
+								</div>
+								<div class="col-sm-4"> 
+									<div class="panel panel-success">
+										<div class="panel-heading">On Sale</div>
+										<div class="panel-body"><img src="@routes.Assets.at("/public/images", "trainer3.jfif")" class="img-responsive" style="width:100%" alt="Image"></div>
+										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+									</div>
+								</div>
+							</div>
+						</div><br>
+		
     </body>
    }
-
-

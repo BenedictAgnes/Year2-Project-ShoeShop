@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/Year2-Project-ShoeShop/error/conf/routes
-// @DATE:Wed Apr 17 14:37:34 IST 2019
+// @DATE:Tue Apr 23 14:06:25 IST 2019
 
 package controllers;
 

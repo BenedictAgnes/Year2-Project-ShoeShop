@@ -7,7 +7,11 @@
 <head>
     <meta charset="utf-8">
     <title>Online Shop - @title</title>
-    <!-- Bootstrap Core CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="@routes.Assets.versioned("stylesheets/main.css")" rel="stylesheet" />
@@ -42,10 +46,12 @@
 
                 </li>
                 <li @if(title=="Register" ){class="active"}>
+                        @if(user ==null){ 
                     <a href="@controllers.security.routes.LoginCtrl.registerUser">Register</a>
+                        }
                 </li>
                 <li>
-                    @if((user !=null) && ("user".equals(user.getRole()))) {
+                    @if((user !=null) && ("customer".equals(user.getRole()))) {
                     <a href="@routes.ShoppingCtrl.viewOrders">View Orders</a>
                     }
                 </li>
@@ -57,7 +63,7 @@
 
     <container>
         <row>
-            <div class="col-md-12">
+            <div class="col-md-24">
                 @content
             </div>
         </row>
