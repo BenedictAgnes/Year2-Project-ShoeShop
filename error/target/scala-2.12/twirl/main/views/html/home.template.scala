@@ -82,21 +82,21 @@ Seq[Any](format.raw/*1.27*/("""
 									<div class="panel panel-primary">
 										<div class="panel-heading">Most Popular</div>
 										<div class="panel-body"><a href="http://localhost:9000/productDetails/14"><img src=""""),_display_(/*52.96*/routes/*52.102*/.Assets.at("/public/images", "trainer1.jfif")),format.raw/*52.147*/("""" class="img-responsive" style="width:100%" alt="Image"></div> </a>
-										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+										<div class="panel-footer">Don't miss out</div>
 									</div>
 								</div>
 								<div class="col-sm-4"> 
 									<div class="panel panel-danger">
 										<div class="panel-heading">New In</div>
-										<div class="panel-body"><img src=""""),_display_(/*59.46*/routes/*59.52*/.Assets.at("/public/images", "trainer2.jfif")),format.raw/*59.97*/("""" class="img-responsive" style="width:100%" alt="Image"></div>
-										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+										<div class="panel-body"><a href="http://localhost:9000/productDetails/15"><img src=""""),_display_(/*59.96*/routes/*59.102*/.Assets.at("/public/images", "trainer2.jfif")),format.raw/*59.147*/("""" class="img-responsive" style="width:100%" alt="Image"></div> </a>
+										<div class="panel-footer">The shoes for you</div>
 									</div>
 								</div>
 								<div class="col-sm-4"> 
 									<div class="panel panel-success">
 										<div class="panel-heading">On Sale</div>
-										<div class="panel-body"><img src=""""),_display_(/*66.46*/routes/*66.52*/.Assets.at("/public/images", "trainer3.jfif")),format.raw/*66.97*/("""" class="img-responsive" style="width:100%" alt="Image"></div>
-										<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+										<div class="panel-body"><a href="http://localhost:9000/productDetails/16"><img src=""""),_display_(/*66.96*/routes/*66.102*/.Assets.at("/public/images", "trainer3.jfif")),format.raw/*66.147*/("""" class="img-responsive" style="width:100%" alt="Image"></div> </a>
+										<div class="panel-footer">Hurry before they sell out!</div>
 									</div>
 								</div>
 							</div>
@@ -119,10 +119,10 @@ Seq[Any](format.raw/*1.27*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 23 14:51:51 IST 2019
+                  DATE: Sun Apr 28 20:27:15 IST 2019
                   SOURCE: /home/wdd/Year2-Project-ShoeShop/error/app/views/home.scala.html
-                  HASH: 3f77193072056241dbd49f3dd5b1b7f01dbbf2e1
-                  MATRIX: 958->1|1078->26|1106->29|1131->46|1170->48|1205->57|1774->599|1789->605|1853->648|2123->891|2138->897|2202->940|2447->1158|2462->1164|2526->1207|3117->1771|3133->1777|3200->1822|3579->2174|3594->2180|3660->2225|4036->2574|4051->2580|4117->2625
+                  HASH: d610fb59c77ac11f639da97170a5c5a78fed4498
+                  MATRIX: 958->1|1078->26|1106->29|1131->46|1170->48|1205->57|1774->599|1789->605|1853->648|2123->891|2138->897|2202->940|2447->1158|2462->1164|2526->1207|3117->1771|3133->1777|3200->1822|3609->2204|3625->2210|3692->2255|4106->2642|4122->2648|4189->2693
                   LINES: 28->1|33->1|34->2|34->2|34->2|36->4|51->19|51->19|51->19|59->27|59->27|59->27|66->34|66->34|66->34|84->52|84->52|84->52|91->59|91->59|91->59|98->66|98->66|98->66
                   -- GENERATED --
               */
